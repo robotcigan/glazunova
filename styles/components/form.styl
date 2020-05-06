@@ -1,0 +1,59 @@
+.form
+  background-color $light-gray
+  padding 8rem
+  &__container
+    align-items center
+    display flex
+    justify-content space-between
+  &__left
+    width 60rem
+  &__right
+    display flex
+  &__person
+    border-radius 50%
+    flex-shrink 0
+    overflow hidden
+    size(36rem)
+    img
+      width 100%
+
+.form-message
+  align-items flex-end
+  display flex
+  flex-direction column
+  margin-right 3.2rem
+  // justify-content flex-end
+  width 35rem
+  &__text
+    background-color $primary-light
+    padding 3.2rem 4rem
+    &:first-child
+      border-radius 32px 32px 0 32px
+    &:last-child
+      border-radius 32px 0 32px 32px
+    &:not(:last-child)
+      margin-bottom 2.4rem
+    p
+      margin-bottom 0
+    svg
+      max-width 100%
+      #message-circle-1
+        animation message-img 2s infinite ease
+      #message-circle-2
+        animation message-img 2s infinite ease .3s
+      #message-circle-3
+        animation message-img 2s infinite ease .7s
+
+
+
+
+@keyframes message-img
+  0%
+    transform none
+    opacity .3
+  50%
+    opacity 1
+    transform translateY(-8px)
+  100%
+    transform none
+    opacity .3

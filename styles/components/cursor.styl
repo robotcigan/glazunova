@@ -1,0 +1,125 @@
+// body
+//   cursor none
+// *
+//   cursor none
+// *:hover
+//   cursor none
+
+.cursor
+  align-items center
+  // background-color $primary
+  border-radius 50%
+  display flex
+  justify-content center
+  // opacity 0
+  left -4rem
+  pointer-events none
+  position fixed
+  top -4rem
+  // transition $transition
+  size(8rem)
+  z-index 99999
+  &__zoom
+    opacity 0
+    position relative
+    transition $transition
+    z-index 10
+  &__before
+    background-color $primary
+    border-radius 50%
+    bottom 0
+    content ''
+    left 0
+    margin auto
+    opacity 0
+    position absolute
+    top 0
+    transition $transition
+    right 0
+    size(0)
+    z-index 0
+  &__arrow
+    align-items center
+    bottom 0
+    display flex
+    justify-content center
+    opacity 0
+    left 0
+    margin auto
+    position absolute
+    right 0
+    top 0
+  &_active
+    .cursor
+      &__zoom
+        opacity 1
+      &__before
+        opacity 1
+        size(8rem)
+  &_swiper
+    .cursor
+      &__zoom
+        display none
+      &__before
+        background-color #fff
+        opacity 1
+        size(8rem)
+    &-left
+      .cursor__arrow_left
+        opacity 1
+    &-right
+      .cursor__arrow_right
+        opacity 1
+
+  // &__before
+  //   background-color $primary
+  //   circle(3.2rem)
+  //   mix-blend-mode difference
+  //   margin -1.2rem
+  //   border-radius 50%
+  //   transition all .3s ease
+  //   will-change transform
+
+  // &--active
+  //   .cursor
+  //     &__before
+  //       size(8rem)
+  //       margin -3.2rem
+  //       // opacity .5
+  
+
+  // &__arrow
+  //   display none
+  //   left 3rem
+  //   position absolute
+  //   top 4rem
+
+  // &--active-gallery-left
+  //   left -4rem
+  //   top -4rem
+  //   .cursor
+  //     &__before
+  //       circle(12rem)
+  //       background-color $main
+  //     &__arrow--left
+  //       display block
+  // &--active-gallery-right
+  //   left -4rem
+  //   top -4rem
+  //   .cursor
+  //     &__before
+  //       circle(12rem)
+  //       background-color $main
+  //     &__arrow--right
+  //       display block
+
+
+@media(max-width 1200px)
+  body
+    cursor initial
+  *
+    cursor initial
+  *:hover
+    cursor initial
+  .cursor
+    display none

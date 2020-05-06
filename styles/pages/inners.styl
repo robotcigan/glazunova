@@ -1,0 +1,120 @@
+.inner-block
+  display flex
+  &__left
+    width 91%
+  &__right
+    align-items flex-start
+    display flex
+    flex-shrink 0
+    justify-content flex-end
+    width 9%
+
+.inner-header
+  // align-items flex-start
+  // display flex
+  // justify-content space-between
+  margin-bottom 6.4rem
+  padding-bottom 3.2rem
+  position relative
+  &:before
+    bottom 0
+    border-bottom $border
+    content ''
+    height 1px
+    position absolute
+    transition all $bezier2 2s
+    width 0
+  &__title
+    max-width 100rem
+    // width 90%
+  // &__left
+  //   width 70%
+  // &__right
+  //   display flex
+  //   justify-content flex-end
+  //   width 30%
+  &__p
+    max-width 72rem
+  &.animated
+    &:before
+      width 90%
+
+
+
+
+.sticky-btn
+  align-items center
+  display flex
+  flex-shrink 0
+  margin-bottom 4rem
+  position sticky
+  right 0
+  top 16rem
+  transform translateY(-4px)
+  &__icon
+    align-items center
+    background-color $primary
+    border-radius 50%
+    display flex
+    flex-shrink 0
+    justify-content center
+    margin-right -.8rem
+    position relative
+    transition $transition
+    size(6.4rem)
+    &:before
+      background-color $primary - 12%
+      border-radius 50%
+      content ''
+      left -.4rem
+      position absolute
+      size(7.2rem)
+      top -.4rem
+      transform scale(0)
+      transition $transition
+      z-index 0
+    img
+      position relative
+      z-index 10
+  &__text-container
+    overflow hidden
+    margin-right 2em
+    position absolute
+    right 5.6rem
+  &__text
+    color $primary
+    font-size 1.2rem
+    font-weight 600
+    flex-shrink 0
+    opacity .5
+    letter-spacing 1px
+    line-height 1.6
+    text-transform uppercase
+    text-align right
+    transition all $bezier2 .6s
+    width 24rem
+  &_scroll
+    .sticky-btn
+      &__icon
+        margin-right -1.2rem
+        size(7.2rem)
+        &:before
+          size(8rem)
+      &__text
+        opacity 0
+        transform translateY(1rem)
+  &:hover
+    .sticky-btn
+      &__icon
+        &:before
+          transform none
+
+
+
+
+
+
+
+
+
+

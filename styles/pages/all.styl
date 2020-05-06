@@ -1,0 +1,35 @@
+// .page
+//   min-height calc(100vh)
+  // &--shadow
+  //   cursor pointer
+  //   position relative
+  //   &:after
+  //     background-color rgba($main, .2)
+  //     content ''
+  //     height 100%
+  //     left 0
+  //     position fixed
+  //     top 0
+  //     width 100%
+  //     z-index 100
+
+.content
+  min-height calc(100vh - 20rem)
+
+
+
+.section
+  margin-bottom 16rem
+  & + .pagination
+    margin-top -4rem
+  &_small-offset
+    margin-bottom 9.6rem
+
+hr,
+.hr
+  background-color transparent
+  border none
+  height 1px
+  border-top $border
+  margin 1.6rem 0 4.8rem 0
+  width 100%
