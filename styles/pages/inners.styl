@@ -10,34 +10,30 @@
     width 9%
 
 .inner-header
-  // align-items flex-start
-  // display flex
-  // justify-content space-between
   margin-bottom 6.4rem
-  padding-bottom 3.2rem
-  position relative
-  &:before
-    bottom 0
-    border-bottom $border
-    content ''
-    height 1px
-    position absolute
-    transition all $bezier2 2s
-    width 0
+  &_bordered
+    padding-bottom 3.2rem
+    position relative
+    &:before
+      bottom 0
+      border-bottom $border
+      content ''
+      height 1px
+      position absolute
+      transition all $bezier2 2s
+      width 0
+  &__label
+    color $gray
+    font-size 1.4rem
+    margin-bottom 2em
   &__title
+    margin-left -6px
     max-width 100rem
-    // width 90%
-  // &__left
-  //   width 70%
-  // &__right
-  //   display flex
-  //   justify-content flex-end
-  //   width 30%
   &__p
     max-width 72rem
   &.animated
     &:before
-      width 90%
+      width 100%
 
 
 

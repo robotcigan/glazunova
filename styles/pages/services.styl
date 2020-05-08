@@ -1,0 +1,40 @@
+.services
+  .service
+    align-items center
+    display flex
+    justify-content space-between
+    padding 2.4rem 0
+    &:not(:last-child)
+      border-bottom $border
+    &__left
+      align-items center
+      display flex
+    &__name
+      font-size 4rem
+      line-height 1.2
+      margin-right .75rem
+      transition $transition
+    &__icon
+      overflow hidden
+      position relative
+      size(1.8rem)
+      &:before,
+      &:after
+        content url('../../img/services-arrow.svg')
+        display block
+        left 0
+        position absolute
+        transition $transition
+      &:before
+        filter grayscale(100%) brightness(0)
+      &:after
+        bottom -2rem
+        left -1.8rem
+    &:hover
+      .service
+        &__name
+          color $primary
+        &__icon
+          &:before,
+          &:after
+            transform translate(1.8rem, -1.8rem)

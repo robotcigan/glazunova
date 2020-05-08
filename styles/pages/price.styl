@@ -1,0 +1,40 @@
+.price
+  display flex
+  margin-bottom 3.2rem
+  &__person
+    align-items center
+    border $border
+    border-right none
+    display flex
+    flex-direction column
+    // justify-content center
+    padding-top 3.2rem
+    text-align center
+    width 24rem
+  &__ava
+    border-radius 50%
+    overflow hidden
+    margin-bottom 1.2rem
+    size(9.6rem)
+  &__name
+    margin-bottom .4em
+  &__content
+    border $border
+    padding 2.4rem 3.2rem
+    width 100%
+  &__line
+    display flex
+    justify-content space-between
+    padding 1em 0
+    transition $transition
+    &:not(:last-child)
+      border-bottom $border
+    &-right
+      display flex
+    &:hover
+      background-color $light-gray
+  &__time
+    font-weight 500
+    margin-right 2em
+  &__cost
+    font-weight 500

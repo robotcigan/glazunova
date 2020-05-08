@@ -12,27 +12,7 @@ p
     margin-top -1em
   a
     color $primary !important
-    position relative
-    &:before
-      background-color rgba($primary, .3)
-      bottom 0
-      content ''
-      height 1px
-      left 0
-      position absolute
-      width 100%
-    &:after
-      background-color $primary
-      bottom 0
-      content ''
-      height 1px
-      left 0
-      position absolute
-      transition $transition
-      width 0
-    &:hover
-      &:after
-        width 100%
+    linkHover($primary)
   .link
     display inline
 
@@ -97,6 +77,14 @@ small
   a
     color $main
     linkHover($primary)
+
+strong
+  display block
+  font-size 1.8rem
+  letter-spacing -.5px
+  line-height 1.5
+  font-weight 500
+  margin-bottom .7em
 
 .header-center
   text-align center

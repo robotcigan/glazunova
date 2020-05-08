@@ -155,71 +155,6 @@
     //   width 50%
 
 
-
-.tabs
-  &__header
-    display flex
-    justify-content center
-    margin-bottom 3.2rem
-  &__link
-    align-items center
-    background-color #fff
-    cursor pointer
-    // display block
-    display flex
-    font-size 1.6rem
-    justify-content center
-    // opacity .5
-    padding 1em
-    padding-top 0
-    position relative
-    text-align center
-    transition $transition
-    &:before,
-    &:after
-      background-color #DDEBF1
-      bottom 0
-      content ''
-      height 1px
-      left 0
-      position absolute
-      transition $transition
-      width 100%
-      z-index 0
-    &:after
-      background-color $primary
-      width 0
-      z-index 10
-    // &:not(:last-child)
-    //   margin-right 2.4rem
-    &_active,
-    &:hover
-      &:after
-        width 100%
-    span
-      line-height 1.2
-      position relative
-      white-space nowrap
-      z-index 1
-  &__content
-    background-color #fff
-    display none
-    // padding-bottom 6.4rem
-    img
-      max-width 100%
-    &_active
-      animation tabs .3s ease
-      display block
-
-@keyframes tabs
-  from
-    opacity 0
-    transform translateY(.5rem)
-  to
-    opacity 1
-    transform none
-
-
 .checkbox
   align-items center
   cursor pointer
@@ -333,27 +268,6 @@
     &__minus,
     &__plus
       padding 1.4rem 2.4rem
-
-
-@media(max-width 1000px)
-  .tabs
-    &__header
-      // overflow hidden
-      overflow-x scroll
-      margin-left -2.4rem
-      margin-right -2.4rem
-      justify-content initial
-      padding 0 2.4rem
-      -webkit-overflow-scrolling touch
-    &__content
-      padding 0
-    &__link
-      font-size 1.4rem
-      padding 1em .5em
-      &:last-child
-        margin-right 2.4rem
-
-
 
 
 @media(max-width 767px)

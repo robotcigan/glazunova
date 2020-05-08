@@ -1,0 +1,40 @@
+.worktime
+  &__line
+    display flex
+    margin-bottom .75em
+  &__day
+    color $gray
+    margin-right 1em
+    min-width 12rem
+
+.map
+  iframe
+    height 64rem
+    width 100%
+
+.contacts-info
+  &__address
+    margin-bottom 1.5em
+  &__mail
+    color $primary
+    display block
+    margin-bottom 1.5em
+    linkHover($primary)
+  &__phone
+    display block
+    margin-bottom 1.5em
+
+.contacts-socials
+  transform translateY(-1.6rem)
+
+.route
+  align-items center
+  display flex
+  &__icon
+    margin-right 4px
+  &__text
+    transition $transition
+  &:hover
+    .route
+      &__text
+        color $primary

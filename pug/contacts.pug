@@ -1,0 +1,70 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.inner-block.section
+        .inner-block__left
+          .inner-header.wow
+            .inner-header__label Мы будем рады пообщаться с вами лично
+            h1.inner-header__title Контакты
+            .container
+              .col.col--sm-4
+                .contacts-info
+                  p.contacts-info__address Краснодар, ул. Шоссе Нефтяников 37/5
+                  a(href="mailto:clinicglazunova@gmail.com").contacts-info__mail clinicglazunova@gmail.com
+                  a(href="tel:+79184514843").contacts-info__phone +7 (918) 451-48-43
+                  a(href="https://yandex.ru/maps/35/krasnodar/?rtext=~45.065896, 38.982832" target="_blank").route
+                    .route__icon
+                      img(src="./img/route.svg", alt="")
+                    .route__text Проложить маршрут
+              .col.col--sm-4
+                .worktime
+                  strong Временное расписание работы
+                  .worktime__line
+                    .worktime__day Понедельник
+                    .worktime__time 9:00 - 19:00
+                  .worktime__line
+                    .worktime__day Вторник
+                    .worktime__time 8:00 - 19:00
+                  .worktime__line
+                    .worktime__day Среда
+                    .worktime__time 9:00 - 19:00
+                  .worktime__line
+                    .worktime__day Четверг
+                    .worktime__time 8:00 - 19:00
+                  .worktime__line
+                    .worktime__day Пятница
+                    .worktime__time 9:00 - 19:00
+                  .worktime__line
+                    .worktime__day Суббота
+                    .worktime__time 9:00 - 19:00
+                  .worktime__line
+                    .worktime__day Воскресенье
+                    .worktime__time 10:00 - 16:00
+              .col.col--sm-4
+                .socials.contacts-socials
+                  a(href="").social.social_insta
+                    img(src="./img/insta.svg", alt="")
+                  a(href="").social.social_vk
+                    img(src="./img/vk.svg", alt="")
+                  a(href="").social.social_facebook
+                    img(src="./img/facebook.svg", alt="")
+
+
+        .inner-block__right
+          a(href="").sticky-btn
+            .sticky-btn__text-container
+              .sticky-btn__text Оплатить онлайн
+            .sticky-btn__icon
+              img(src="./img/sticky-payment.svg", alt="")
+
+    //- <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/35/krasnodar/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Краснодар</a><a href="https://yandex.ru/maps/35/krasnodar/house/shosse_neftyanikov_37_5/Z0EYfw9iQUYFQFpvfXx3dHRqYg==/?ll=38.982832%2C45.065896&sll=-114.264260%2C60.895869&sspn=71.083550%2C19.846236&utm_medium=mapframe&utm_source=maps&z=17.62" style="color:#eee;font-size:12px;position:absolute;top:14px;">Шоссе Нефтяников, 37/5 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/C0X~VIk6" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    .map
+      iframe(src="https://yandex.ru/map-widget/v1/-/C0X~VIk6" frameborder="0" allowfullscreen="true" style="position:relative;")
+
+
+
+
+
+

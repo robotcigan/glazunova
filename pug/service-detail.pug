@@ -3,15 +3,14 @@ extends layout.pug
 block content
   main.content
     .wrapper
-      .inner-block
+      section.inner-block.section
         .inner-block__left
-          section.section
-            .inner-header.wow
-              h1.inner-header__title Психотерапия детей и&nbsp;подростков
-              p.inner-header__p Для быстрого и комфортного  восстановления сил организма после стрессов, общих заболеваний; помогает справиться с депрессией, хронической или физической усталостью, расстройством сна, лишний весом
+          .inner-header.inner-header_bordered.wow
+            h1.inner-header__title Психотерапия детей и&nbsp;подростков
+            p.inner-header__p Для быстрого и комфортного  восстановления сил организма после стрессов, общих заболеваний; помогает справиться с депрессией, хронической или физической усталостью, расстройством сна, лишний весом
 
-            h2 Как работает психотерапия
-            p Психотерапия развивает понимание своих проблем и находит пути их решения. Ребенок или подросток начинает лучше понимать свои чувства и конфликты. Этот процесс может занять довольно длительное время, но он позволяет детям и подросткам развить способность управлять собой и своими эмоциями. Психотерапия не является магическим процессом. Тяжелый труд, терпение и доверие являются необходимыми элементами для достижения целей.
+          h2 Как работает психотерапия
+          p Психотерапия развивает понимание своих проблем и находит пути их решения. Ребенок или подросток начинает лучше понимать свои чувства и конфликты. Этот процесс может занять довольно длительное время, но он позволяет детям и подросткам развить способность управлять собой и своими эмоциями. Психотерапия не является магическим процессом. Тяжелый труд, терпение и доверие являются необходимыми элементами для достижения целей.
 
         .inner-block__right
           a(href="").sticky-btn
@@ -20,46 +19,7 @@ block content
             .sticky-btn__icon
               img(src="./img/sticky-sign.svg", alt="")
 
-    .form
-      .wrapper
-        .form__container
-          .form__left
-            form
-              .form-control
-                .form-control__label Как вас зовут?
-                input(type="text" placeholder="Иванов Иван Иванович")
-              .form-control
-                .form-control__label Телефон
-                input(type="tel").phone-mask
-              .form-control
-                .form-control__label К какому доктору?
-                select.custom-select
-                  option 1
-                  option 2
-                  option 3
-              .container
-                .col.col--sm-8
-                  .form-control
-                    .form-control__label Когда
-                    input(type="text" placeholder="28.03.2020")
-                .col.col--sm-4
-                  .form-control
-                    .form-control__label Во сколько
-                    input(type="text" placeholder="17:00")
-              small Нажимая кнопку «Записаться» я соглашаюсь на 
-                a(href="") обработку моих персональных данных
-              .btn
-                .btn__text Записаться
-              
-
-          .form__right
-            .form-message
-              .form-message__text
-                p Здравствуйте, меня зовут Анастасия. Я администратор клиники Глазуновой. К какому доктору вас записать?
-              .form-message__text
-                img(src="./img/message-icon.svg", alt="").svg
-            .form__person
-              img(src="./img/admin.jpg", alt="")
+    include form-block.pug
 
 
 

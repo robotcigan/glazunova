@@ -1,0 +1,69 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.inner-block.section
+        .inner-block__left
+          .inner-header.wow
+            h1.inner-header__title Стоимость услуг
+            p.inner-header__p Первичный прием по 50% предоплате. Все предложения, опубликованные на сайте, не являются публичной офертой. 
+              a(href="") Скачать PDF-прайс 
+          .tabs
+            .tabs__header
+              .tabs__link.tabs__link_active Все
+              .tabs__link Психиатры и психотерапевты
+              .tabs__link Неврологи и терапевты
+              .tabs__link Психологи
+              .tabs__link Другие специалисты
+              .tabs__link Справки и другие услуги
+
+            .tabs__content.tabs__content_active
+              - for (var i = 0; i < 12; i++)
+                .price.wow.fade-up
+                  .price__person
+                    .price__ava
+                      img(src="./img/specialist-1.png", alt="")
+                    .price__name Глазунова
+                    .price__secondname Татьяна Ивановна
+                  .price__content
+                    .price__line
+                      .price__service Прием (осмотр, консультация) врача-психиатра первичный
+                      .price__line-right
+                        .price__time 50 мин
+                        .price__cost 4 000 ₽
+                    .price__line
+                      .price__service Прием (осмотр, консультация) врача-психиатра повторный (для коррекции доз лекарств)
+                      .price__line-right
+                        .price__time 50 мин
+                        .price__cost 4 000 ₽
+                    .price__line
+                      .price__service Прием (осмотр, консультация) врача-психиатра повторный (с психокоррекцией)
+                      .price__line-right
+                        .price__time 50 мин
+                        .price__cost 4 000 ₽
+                    .price__line
+                      .price__service Индивидуальная психотерапия
+                      .price__line-right
+                        .price__time 50 мин
+                        .price__cost 4 000 ₽
+
+
+
+
+
+
+        .inner-block__right
+          a(href="").sticky-btn
+            .sticky-btn__text-container
+              .sticky-btn__text Оплатить онлайн
+            .sticky-btn__icon
+              img(src="./img/sticky-payment.svg", alt="")
+
+    include form-block.pug
+
+
+
+
+
+
