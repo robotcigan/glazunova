@@ -1,0 +1,111 @@
+.quote-slider
+  background-color #E8E7E5
+  border-radius $radius
+  overflow hidden
+  &__container
+    display flex
+    // transition opacity ease 1s
+    // transition $transition2
+
+.quote
+  display flex
+  flex-shrink 0
+  // opacity 0
+  justify-content center
+  opacity 0
+  position relative
+  transition opacity .5s ease
+  width 100%
+  &:nth-child(2)
+    z-index 10
+  &_active
+    opacity 1 !important
+    .quote
+      &__progress
+        circle
+          animation quoteProgress 5s infinite linear
+  &__bg
+    background-color #E8E7E5
+    left 0
+    position absolute
+    size(100%)
+    top 0
+    z-index -1
+  &__text
+    font-size 2.4rem
+    font-weight 500
+    line-height 1.4
+    left 6.4rem
+    max-width 41rem
+    position absolute
+    top 6.4rem
+  &__progress
+    position absolute
+    circle
+      // animation quoteProgress 4s infinite linear
+      fill none
+      stroke-dasharray 250
+      // stroke-dashoffset 250
+      // transition stroke-dashoffset ease 1.1s
+  &__next
+    align-items center
+    // background-color $primary
+    border-radius 50%
+    circleHover(8.8rem, $primary)
+    cursor pointer
+    display flex
+    justify-content center
+    size(8.8rem)
+    position absolute
+    right 6.4rem
+    top 6.4rem
+    z-index 10
+    // &:hover
+    //   .quote
+    //     &__progress
+    //       circle
+    //         stroke-dashoffset 0
+  &__person
+    bottom 6.4rem
+    left 6.4rem
+    max-width 40rem
+    position absolute
+  &__name
+    font-weight 500
+    margin-bottom .4em
+  &__position
+    color $gray
+    font-size 1.4rem
+    line-height 1.6
+
+
+@keyframes quoteProgress
+  0%
+    stroke-dashoffset 250
+  100%
+    stroke-dashoffset 0
+
+
+.structure
+  background-color #DEE6EB
+  border-radius $radius
+  display flex
+  flex-direction column
+  justify-content space-between
+  height 20rem
+  padding 3.2rem
+  &__name
+    font-size 2rem
+    font-weight 500
+  &__count
+    color $gray
+    font-size 1.4rem
+
+
+
+
+
+
+
+
+

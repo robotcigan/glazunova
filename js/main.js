@@ -40,9 +40,9 @@ $(document).ready(function() {
   }
   $(window).scroll(function () {
     stickyBtn();
-  });
+  })
 
-  stickyBtn();
+  stickyBtn()
 
   // Slider/carousel
   let swiper = new Swiper('.slider .swiper-container', {
@@ -55,6 +55,37 @@ $(document).ready(function() {
       el: '.swiper-pagination',
       clickable: true
     }
+  })
+
+
+  // about slider
+
+  let aboutSliderInterval;
+  if ($('.quote-slider').length) {
+    aboutSliderInterval = setInterval(() => { aboutSliderNext() }, 4500);
+  }
+
+  function aboutSliderNext() {
+    let quoteIndex = $('.quote_active').index();
+    let quoteCount = $('.quote-slider .quote').length;
+
+    if (quoteIndex < quoteCount - 1) {
+      $('.quote-slider .quote').removeClass('quote_active');
+      $('.quote-slider .quote').removeAttr("style");
+      $('.quote-slider .quote').eq(quoteIndex + 1).css({
+        'transform': `translateX(-${(quoteIndex + 1) * 100 }%)`
+      });
+      $('.quote-slider .quote').eq(quoteIndex + 1).addClass('quote_active');
+    } else {
+      $('.quote-slider .quote').removeClass('quote_active');
+      $('.quote-slider .quote').eq(0).addClass('quote_active');
+    }
+  }
+
+  $('.quote-slider .quote__next').on('click', function() {
+    aboutSliderNext();
+    clearInterval(aboutSliderInterval);
+    aboutSliderInterval = setInterval(() => { aboutSliderNext() }, 4500)
   });
 
 
@@ -117,10 +148,22 @@ $(document).ready(function() {
     $(this).find('.btn__text').clone().appendTo($(this));
   });
 
-  // footer-links
-  // $('.footer__link').each(function() {
-  //   $(this).find('a').clone().appendTo($(this));
-  // });
+
+  // faq
+  $('.faq-link').on('click', function() {
+    let index = $(this).index();
+    $('.faqs').removeClass('faqs_active');
+    $('.faqs').eq(index).addClass('faqs_active');
+    $('.faq-link').removeClass('faq-link_active');
+    $(this).addClass('faq-link_active');
+  })
+
+  $('.faq__top').on('click', function() {
+    // $('.faq').not(this).removeClass('faq_active');
+    // $('.faq .faq__text').slideUp();
+    $(this).closest('.faq').toggleClass('faq_active');
+    $(this).closest('.faq').find('.faq__text').stop().slideToggle();
+  })
 
   // SVG magic
   jQuery('img.svg').each(function(){

@@ -1,0 +1,42 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.wow
+              h1.inner-header__title Лицензии и документы
+        .container
+          .col.col--sm-3
+            a(href="./img/license-1.jpg").document.modal-open
+              .document__img
+                img(src="./img/license-1.jpg", alt="")
+              .document__ex DOCX
+              .document__name Лицензия на осуществление медицинской деятельности
+          .col.col--sm-3
+            a(href="./img/license-2.jpg").document.modal-open
+              .document__img
+                img(src="./img/license-2.jpg", alt="")
+              .document__ex DOCX
+              .document__name Приложение №1 к Лицензии на осуществление медицинской деятельности
+        hr
+        .files.container
+          - for(var i = 0; i < 12; i++)
+            .col.col--sm-3
+              a(href="" target="_blank").file
+                .file__icon
+                  img(src="./img/file.svg", alt="")
+                .file__container
+                  .file__ex PDF, 27 Kb
+                  .file__name Информация об страховых учреждениях, с которыми заключены договора на оказание и оплату медуслуг по ОМС
+
+
+    include form-block.pug
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.inner-header_bordered.wow
+              h1.inner-header__title Онлайн-оплата
+              p.inner-header__p Если вы в первый раз оплачиваете онлайн и у вас есть вопросы, то вы можете проконсультироваться с нашим администратором по телефону +7 (918) 451-48-43 или +7 (861) 255-18-45. Или написав нам в 
+                a(href="") WhatsApp
+
+            .container
+              .col.col--sm-6
+                .payment-form
+                  form
+                    .form-control
+                      label.form-control__label ФИО
+                      input(type="text" placeholder="Иванов Иван Иванович")
+                    .form-control
+                      label.form-control__label Сумма, руб.
+                      input(type="number" placeholder="3000")
+                    .form-control
+                      label.form-control__label Телефон
+                      input(type="text" placeholder="+7 (___) ___  __  __").phone-mask
+                    .form-control
+                      label.form-control__label Электронная почта
+                      input(type="email" placeholder="sample@gmail.com")
+                    label.radio
+                      input(type="radio" name="radio")
+                      .radio__label
+                      span Яндекс Деньги (Яндекс кошелёк)
+                    label.radio
+                      input(type="radio" name="radio")
+                      .radio__label
+                      span С банковской карты
+                    small Нажимая кнопку «Записаться» я соглашаюсь на 
+                      a(href="") обработку моих персональных данных
+                    .btn
+                      .btn__text Отправить
+              .col.col--sm-1
+              .col.col--sm-3
+                .attentions
+                  .attention.attention_red.wow.fade-up
+                    p В случае неявки на прием предоплата на счёт не возвращается!
+                  .attention.wow.fade-up
+                    p Проводить оплату нужно за 2 рабочих дня до даты консультации
+                  .attention.wow.fade-up
+                    p После оплаты сообщите администратору дату оплаты и ФИО
+
+
+          .inner-block__right
+            a(href="").sticky-btn
+              .sticky-btn__text-container
+                .sticky-btn__text Спросить в Whatsapp
+              .sticky-btn__icon
+                img(src="./img/sticky-whatsapp.svg", alt="")
+
+
+
+
+
+
+
+

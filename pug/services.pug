@@ -3,27 +3,32 @@ extends layout.pug
 block content
   main.content
     .wrapper
-      section.inner-block.section
-        .inner-block__left
-          .inner-header.wow
-            h1.inner-header__title Услуги
-            p.inner-header__p В нашей клинике вы можете прокунсультироваться у ведущих специалистов Красноадара и края
-          .services
-            - var services = ['Консультация психиатра', 'Психотерапия', 'Психотерапия детей и подростков', 'Транскраниальная магнитная стимуляция', 'Альфа-капсула', 'Справки от психиатра для детского сада и школы', 'Функциональная диагностика', 'Кабинет Памяти', 'Тренинги и семинары', 'Skype-консультации']
-            - for (var i = 0; i < 10; i++)
-              a(href="").service
-                .service__left
-                  .service__name= services[i]
-                  .service__icon
-                .service__right
-                  .service__price от 4 000 руб.
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.wow
+              h1.inner-header__title Услуги
+              p.inner-header__p В нашей клинике вы можете прокунсультироваться у ведущих специалистов Красноадара и края
 
-        .inner-block__right
-          a(href="").sticky-btn
-            .sticky-btn__text-container
-              .sticky-btn__text Оплатить онлайн
-            .sticky-btn__icon
-              img(src="./img/sticky-payment.svg", alt="")
+            .services
+              - var services = ['Консультация психиатра', 'Психотерапия', 'Психотерапия детей и подростков', 'Транскраниальная магнитная стимуляция', 'Альфа-капсула', 'Справки от психиатра для детского сада и школы', 'Функциональная диагностика', 'Кабинет Памяти', 'Тренинги и семинары', 'Skype-консультации']
+              - for (var i = 0; i < 10; i++)
+                a(href="").service
+                  .service__left
+                    .service__name= services[i]
+                    .service__icon
+                  .service__right
+                    .service__price от 4 000 руб.
+
+          .inner-block__right
+            a(href="").sticky-btn
+              .sticky-btn__text-container
+                .sticky-btn__text Оплатить онлайн
+              .sticky-btn__icon
+                img(src="./img/sticky-payment.svg", alt="")
+
+        
+
 
     include form-block.pug
 

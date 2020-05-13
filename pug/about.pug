@@ -1,0 +1,81 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.wow
+              h1.inner-header__title О клинике
+              p.inner-header__p Специалисты нашей клиники используют как медикаментозные, так и немедикаментозные методы лечения, в том числе различные методы психотерапевтического и физиотерапевтического  лечения. Все программы основаны на современных достижениях медицинской науки.  У нас работают кандидаты медицинских наук, врачи высшей категории, имеющие большой и успешный практический опыт.
+              p.inner-header__p Работаем с 2014 года
+
+      
+      section.quote-slider.section
+        .quote-slider__container
+          .quote.quote_active
+            .quote__bg
+            .quote__text Лечим все виды психических неврологических расстройств. Помогам людям всех возрастов: от малышей до людей пожилого возраста.
+            .quote__img
+              img(src="./img/quote-1.png", alt="")
+            .quote__person
+              .quote__name Данилова Екатерина Владимировна
+              .quote__position Невролог-эпилептолог <br> Врач высшей категории 
+            .quote__next
+              svg(height="74" width="74").quote__progress
+                circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
+              img(src="./img/quote-arrow.svg", alt="")
+          
+          .quote
+            .quote__bg
+            .quote__text Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания.
+            .quote__img
+              img(src="./img/quote-2.png", alt="")
+            .quote__person
+              .quote__name Данилова Екатерина Владимировна
+              .quote__position Невролог-эпилептолог <br> Врач высшей категории 
+            .quote__next
+              svg(height="74" width="74").quote__progress
+                circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
+              img(src="./img/quote-arrow.svg", alt="")
+
+          .quote
+            .quote__bg
+            .quote__text Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания.
+            .quote__img
+              img(src="./img/quote-3.png", alt="")
+            .quote__person
+              .quote__name Данилова Екатерина Владимировна
+              .quote__position Невролог-эпилептолог <br> Врач высшей категории 
+            .quote__next
+              svg(height="74" width="74").quote__progress
+                circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
+              img(src="./img/quote-arrow.svg", alt="")
+
+
+      section.section
+        .container
+          .col.col--sm-1
+          .col.col--sm-4
+            p Наши специалисты с медицинским и психоаналитическим образованием, окажут психологическую помощь.
+            p Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания и другими сложностями, возникающими у детей и подростков.
+          .col.col--sm-1
+          .col.col--sm-4
+            p Наши специалисты с медицинским и психоаналитическим образованием, окажут психологическую помощь.
+            p Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания и другими сложностями, возникающими у детей и подростков.
+
+
+      section.section
+        .label Структура
+        h2 У нас 4 отделения
+        .container
+          - for (var i = 0; i < 4; i++)
+            .col.col--sm-3
+              .structure
+                .structure__name Взрослое
+                .structure__count 8 специалистов
+
+
+
+

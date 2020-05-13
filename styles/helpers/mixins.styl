@@ -32,9 +32,39 @@ linkHover($color)
       width 100%
 
 
-// circle($size)
-//   height $size
-//   width $size
+circleHover($circleSize, $circleBg)
+  align-items center
+  cursor pointer
+  display flex
+  flex-shrink 0
+  justify-content center
+  size($circleSize)
+  &:before,
+  &:after
+    background-color $circleBg
+    border-radius 50%
+    content ''
+    left 0
+    position absolute
+    size($circleSize)
+    top 0
+    transition $transition
+    z-index -1
+  &:after
+    background-color $circleBg - 5%
+    size($circleSize * 1.2)
+    transform scale(0)
+    left -($circleSize * 0.1)
+    top -($circleSize * 0.1)
+  &:hover
+    // &:before
+    //   transform scale(0.9)
+    &:after
+      transform none
+
+
+
+
 
 
 clearfix()

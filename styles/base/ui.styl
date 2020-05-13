@@ -166,7 +166,7 @@
     border-radius $radius
     border $border
     cursor pointer
-    circle(1.8rem)
+    size(1.8rem)
     display inline-block
     flex-shrink 0
     margin-right .4rem
@@ -176,7 +176,7 @@
     &:after
       color $main
       // content "\f00c"
-      content url('../../img/checkbox.png')
+      content url('../../img/check.svg')
       display none
       // font-family 'FontAwesome'
       font-size 1.3rem
@@ -197,46 +197,36 @@
       display block
 
 .radio
+  align-items center
   cursor pointer
-  display block
+  display flex
   margin-bottom 1rem
   user-select none
   &__label
-    background transparent
+    background #fff
     border-radius 50%
-    border 1px solid $light-gray - 10%
+    border $border
     cursor pointer
-    circle(2.4rem)
+    size(3.2rem)
     display inline-block
     margin-right 1rem
     position relative
-    vertical-align middle
     z-index 1
     &:after
-      background-color $primary
-      border-radius 50%
-      circle(1.4rem)
-      color #fff
-      content ''
+      align-items center
+      content url('../../img/check.svg')
       display none
-      font-size 1.5rem
-      left 4px
+      justify-content center
+      margin-top -2px
+      size(100%)
       position absolute
-      top 4px
       z-index 10
   input
     display none
   input:checked + .radio__label
-    background-color #fff
     border-color $primary
-    box-shadow 0 0 0 1px $primary
     &:after
-      display block
-  label
-    color $main
-    display inline-block
-    cursor pointer
-    vertical-align middle
+      display flex
 
 .file-upload
   display block

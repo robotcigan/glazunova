@@ -1,13 +1,15 @@
 .inner-block
   display flex
   &__left
-    width 91%
+    // width 91%
+    width 100%
   &__right
     align-items flex-start
     display flex
     flex-shrink 0
     justify-content flex-end
-    width 9%
+    // width 9%
+    width 10%
 
 .inner-header
   margin-bottom 6.4rem
@@ -37,7 +39,6 @@
 
 
 
-
 .sticky-btn
   align-items center
   display flex
@@ -49,7 +50,7 @@
   transform translateY(-4px)
   &__icon
     align-items center
-    background-color $primary
+    // background-color $primary
     border-radius 50%
     display flex
     flex-shrink 0
@@ -58,17 +59,23 @@
     position relative
     transition $transition
     size(6.4rem)
-    &:before
-      background-color $primary - 12%
+    &:before,
+    &:after
+      background-color $primary
       border-radius 50%
       content ''
-      left -.4rem
+      left 0
       position absolute
-      size(7.2rem)
-      top -.4rem
-      transform scale(0)
+      size(6.4rem)
+      top 0
       transition $transition
       z-index 0
+    &:after
+      background-color $primary - 12%
+      size(7.2rem)
+      transform scale(0)
+      left -.4rem
+      top -.4rem
     img
       position relative
       z-index 10
@@ -92,9 +99,13 @@
   &_scroll
     .sticky-btn
       &__icon
-        margin-right -1.2rem
-        size(7.2rem)
         &:before
+          left -.4rem
+          top -.4rem
+          size(7.2rem)
+        &:after
+          left -.8rem
+          top -.8rem
           size(8rem)
       &__text
         opacity 0
@@ -103,8 +114,12 @@
     .sticky-btn
       &__icon
         &:before
+          transform scale(1.1)
+        &:after
           transform none
-
+      &__text
+        opacity .5
+        transform none
 
 
 

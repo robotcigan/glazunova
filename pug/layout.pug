@@ -66,12 +66,13 @@ html(lang="ru")
 
     main.page
       header.header
+        .header__progress
         .header__container.wrapper
           .header__left
             a(href="./pages.html").logo
               img(src="./img/logo.svg", alt="").svg
             .nav
-              .nav__link: a(href="./service.html") О клинике
+              .nav__link: a(href="./about.html") О клинике
               .dropdown
                 .dropdown__container
                   .dropdown__section
@@ -97,10 +98,10 @@ html(lang="ru")
                       .dropdown__link: a(href="") Подкормка
                       .dropdown__link: a(href="") Ферменты
 
-              .nav__link: a(href="./portfolio.html") Специалисты
-              .nav__link: a(href="./clients.html") Услуги
-              .nav__link: a(href="./blog.html") Цены
-              .nav__link: a(href="./photos.html") Контакты
+              .nav__link: a(href="./specialists.html") Специалисты
+              .nav__link: a(href="./services.html") Услуги
+              .nav__link: a(href="./price.html") Цены
+              .nav__link: a(href="./contacts.html") Контакты
           .header__right
             .header__phone-container
               a(href="tel:79882459001").header__phone +7 988 245-90-01
@@ -153,9 +154,9 @@ html(lang="ru")
 
     script(src="./js/jquery-2.2.1.min.js")
     script(src="./js/TweenMax.min.js")
-    //- script(src="./js/ScrollMagic.min.js")
-    //- script(src="./js/debug.addIndicators.min.js")
-    //- script(src="./js/animation.gsap.min.js")
+    script(src="./js/ScrollMagic.min.js")
+    script(src="./js/debug.addIndicators.min.js")
+    script(src="./js/animation.gsap.min.js")
     script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
     script(src="./js/smoothscroll.js")
     //- script(src="./js/smoothscroll-js.js")

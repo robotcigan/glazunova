@@ -1,0 +1,83 @@
+.faq-links
+  position sticky
+  top 12rem
+
+.faq-link
+  cursor pointer
+  font-size 2rem
+  font-weight 500
+  margin-bottom 2em
+  transition $transition
+  &_active,
+  &:hover
+    color $primary
+
+.faqs
+  display none
+  &_active
+    animation tabs .3s ease
+    display block
+
+
+.faq
+  border-bottom $border
+  &:first-child
+    .faq
+      &__title
+        padding-top 0
+  &__container
+    position relative
+  &__top
+    align-items center
+    cursor pointer
+    display flex
+    justify-content space-between
+    &:hover
+      .faq
+        &__arrow
+          img
+            filter invert(100%)
+          &:after
+            transform none
+  &__arrow
+    circleHover(4rem, #eee)
+    position relative
+    transition $transition
+    &:after
+      background-color $second
+    img
+      transition $transition
+  &__title
+    font-size 2.4rem
+    line-height 1.2
+    padding 1em 0
+    padding-right 1.5em
+  &__text
+    display none
+    color $gray-text
+    padding-right 12rem
+    p
+      color $gray-text
+  &_active
+    .faq
+      &__arrow
+        transform rotate(180deg)
+        &:before
+          background-color $gray
+        img
+          filter invert(100%)
+      // &__text
+      //   display none
+
+
+
+
+@keyframes faqs
+  from
+    opacity 0
+    transform translateY(.5rem)
+  to
+    opacity 1
+    transform none
+
+
