@@ -103,10 +103,14 @@ html(lang="ru")
               .nav__link: a(href="./price.html") Цены
               .nav__link: a(href="./contacts.html") Контакты
           .header__right
-            .header__phone-container
-              a(href="tel:79882459001").header__phone +7 988 245-90-01
-            .header-button Оплатить онлайн
-            .header-button Записаться
+            .header__search
+              img(src="./img/search.svg", alt="")
+            a(href="").header__blind
+              img(src="./img/eye.svg", alt="")
+              .header__blind-link Для слабовидящих
+            a(href="tel:79882459001").header__phone +7 988 245-90-01
+            a(href="").header__btn Оплатить онлайн
+            a(href="").header__btn Записаться
             .burger
 
       block content

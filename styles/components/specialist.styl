@@ -1,0 +1,30 @@
+.specialist
+  &__photo
+    margin-bottom 2.4rem
+    min-width 35.2rem
+    position relative
+    img
+      width 100%
+    &-hover
+      opacity 0
+      left 0
+      position absolute
+      top 0
+      transition $transition
+  &__name
+    font-weight 500
+    line-height 1.2
+    margin-bottom .5em
+    transition $transition
+  &__status
+    color $gray
+    font-size 1.4rem
+    line-height 1.2
+    margin-bottom .25em
+  &:hover
+    .specialist
+      &__photo
+        &-hover
+          opacity 1
+      &__name
+        color $primary

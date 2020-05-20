@@ -10,12 +10,13 @@ $(document).ready(function() {
   });
   wow.init();
 
+
+
+  // Progress bar прогресс в шапке
   let progressTween = new TimelineMax()
     .to('.header__progress', 1, {
       width: '100%'
     });
-
-  console.log($(window).height())
 
   let progressScroll = new ScrollMagic.Scene({
     triggerElement: '.page',
@@ -27,4 +28,49 @@ $(document).ready(function() {
   // .addIndicators()
   .addTo(controller);
 
+  
+  // blind
+  $('.header__blind').on('mouseover', function() {
+    $('.page').addClass('page_blind');
+  });
+  $('.header__blind').on('mouseout', function() {
+    $('.page').removeClass('page_blind');
+  });
+
+  // Hero scroll
+  let heroTween = new TimelineMax()
+    .to('.hero__parallax', 1, {
+      x: -200
+    });
+
+  let heroScroll = new ScrollMagic.Scene({
+    triggerElement: '.page',
+    triggerHook: 0,
+    duration: $(window).height()
+  })
+  .setTween(heroTween)
+  // .addIndicators()
+  .addTo(controller);
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
+
+
+
+
+
+
+

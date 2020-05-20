@@ -1,0 +1,51 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.wow
+              h1.inner-header__title Наши специалисты
+
+
+
+          .inner-block__right
+            a(href="").sticky-btn
+              .sticky-btn__text-container
+                .sticky-btn__text Я не знаю к кому лучше обратиться, посоветуйте мне 
+              .sticky-btn__icon
+                img(src="./img/whatsapp.svg", alt="")
+
+
+
+
+        .tabs
+          .tabs__header
+            a(href="").tabs__link.tabs__link_active Все
+            a(href="").tabs__link Психиатры и психотерапевты
+            a(href="").tabs__link Неврологи и терапевты
+            a(href="").tabs__link Психологи
+            a(href="").tabs__link Другие специалисты
+        .container
+          - for (var i = 0; i < 30; i++)
+            .col.col--sm-3
+              a(href="").specialist
+                .specialist__photo
+                  +webp('specialists/1', 'jpg')
+                  .specialist__photo-hover
+                    +webp('specialists/1-hover', 'jpg')
+
+                .specialist__name Шелудько Михаил Васильевич
+                .specialist__status-container
+                  .specialist__status Психиатр-психотерапевт
+                  .specialist__status Кандидат медицинских наук
+                  .specialist__status Член Российского общества психиатров
+
+
+
+
+
+
+

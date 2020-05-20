@@ -1,18 +1,18 @@
 $(document).ready(function() {
 
   // burger
-  $('.burger').on('click', function() {
-    $(this).toggleClass('burger_active');
-    $('.mobile-menu').slideToggle();
-    $('.mobile-menu').toggleClass('mobile-menu_active');
-    $('.logo').toggleClass('logo_white');
-    $('.header').toggleClass('header_mobile-menu-open');
-  });
+  // $('.burger').on('click', function() {
+  //   $(this).toggleClass('burger_active');
+  //   $('.mobile-menu').slideToggle();
+  //   $('.mobile-menu').toggleClass('mobile-menu_active');
+  //   $('.logo').toggleClass('logo_white');
+  //   $('.header').toggleClass('header_mobile-menu-open');
+  // });
 
-  $('.mobile-menu-accordion').on('click', function () {
-    $(this).find('.mobile-menu__link-container').slideToggle();
-    $(this).find('.mobile-menu__link_big').toggleClass('mobile-menu__link_big_active');
-  })
+  // $('.mobile-menu-accordion').on('click', function () {
+  //   $(this).find('.mobile-menu__link-container').slideToggle();
+  //   $(this).find('.mobile-menu__link_big').toggleClass('mobile-menu__link_big_active');
+  // })
 
   // модалки
   $('.modal-open').fancybox({
@@ -29,6 +29,10 @@ $(document).ready(function() {
       showMask: true
     });
   }
+
+  // hero
+  let heroContainer = $('.hero__container').clone();
+  $('.hero__parallax').append(heroContainer);
 
   // Sticky button
   function stickyBtn() {
@@ -105,41 +109,41 @@ $(document).ready(function() {
 
 
   // Кастомный курсор
-  let cursorHoverAnimationList = '.document, .slider, .slider-scroll .swiper-slide';
+  // let cursorHoverAnimationList = '.document, .slider, .slider-scroll .swiper-slide';
 
-  let cursor = $('.cursor')
-  $(cursorHoverAnimationList).on('mouseenter', () => {
-    $(window).on('mousemove', (e) => {
-      $('.cursor').css({
-        transform: `translate3d(${e.clientX - 4}px, ${e.clientY - 4}px, 0)`
-      });
-    })
-  });
-  $(cursorHoverAnimationList).on('mouseleave', () => {
-    $(window).off('mousemove');
-    cursor.removeClass('cursor_active');
-  });
+  // let cursor = $('.cursor')
+  // $(cursorHoverAnimationList).on('mouseenter', () => {
+  //   $(window).on('mousemove', (e) => {
+  //     $('.cursor').css({
+  //       transform: `translate3d(${e.clientX - 4}px, ${e.clientY - 4}px, 0)`
+  //     });
+  //   })
+  // });
+  // $(cursorHoverAnimationList).on('mouseleave', () => {
+  //   $(window).off('mousemove');
+  //   cursor.removeClass('cursor_active');
+  // });
 
-  $('.document, .slider-scroll .swiper-slide').on('mouseenter', () => {
-    cursor.addClass('cursor_active');
-  });
-  $('.document, .slider-scroll .swiper-slide').on('mouseleave', () => {
-    cursor.removeClass('cursor_active');
-  });
+  // $('.document, .slider-scroll .swiper-slide').on('mouseenter', () => {
+  //   cursor.addClass('cursor_active');
+  // });
+  // $('.document, .slider-scroll .swiper-slide').on('mouseleave', () => {
+  //   cursor.removeClass('cursor_active');
+  // });
 
-  $('.slider__control_left').on('mouseenter', () => {
-    cursor.addClass('cursor_swiper cursor_swiper-left');
-  });
-  $('.slider__control_left').on('mouseleave', () => {
-    cursor.removeClass('cursor_swiper cursor_swiper-left');
-  });
+  // $('.slider__control_left').on('mouseenter', () => {
+  //   cursor.addClass('cursor_swiper cursor_swiper-left');
+  // });
+  // $('.slider__control_left').on('mouseleave', () => {
+  //   cursor.removeClass('cursor_swiper cursor_swiper-left');
+  // });
 
-  $('.slider__control_right').on('mouseenter', () => {
-    cursor.addClass('cursor_swiper cursor_swiper-right');
-  });
-  $('.slider__control_right').on('mouseleave', () => {
-    cursor.removeClass('cursor_swiper cursor_swiper-right');
-  });
+  // $('.slider__control_right').on('mouseenter', () => {
+  //   cursor.addClass('cursor_swiper cursor_swiper-right');
+  // });
+  // $('.slider__control_right').on('mouseleave', () => {
+  //   cursor.removeClass('cursor_swiper cursor_swiper-right');
+  // });
 
 
 
@@ -163,7 +167,7 @@ $(document).ready(function() {
     // $('.faq .faq__text').slideUp();
     $(this).closest('.faq').toggleClass('faq_active');
     $(this).closest('.faq').find('.faq__text').stop().slideToggle();
-  })
+  });
 
   // SVG magic
   jQuery('img.svg').each(function(){
