@@ -32,7 +32,7 @@ linkHover($color)
       width 100%
 
 
-circleHover($circleSize, $circleBg)
+circleHover($circleSize, $circleBg, $circleBgHover)
   align-items center
   cursor pointer
   display flex
@@ -51,14 +51,20 @@ circleHover($circleSize, $circleBg)
     transition $transition
     z-index -1
   &:after
-    background-color $circleBg - 5%
-    size($circleSize * 1.2)
+    background-color $circleBgHover
+    size($circleSize + .8rem)
+    // size($circleSize)
     transform scale(0)
-    left -($circleSize * 0.1)
-    top -($circleSize * 0.1)
+    // left -($circleSize * 0.1)
+    left -.4rem
+    top -.4rem
+    // left 0
+    // top 0
+    // top -($circleSize * 0.1)
   &:hover
-    // &:before
-    //   transform scale(0.9)
+    &:before
+      // opacity 0
+      transform scale(.8)
     &:after
       transform none
 
@@ -73,7 +79,10 @@ imageShadow($shadowOpacity)
     top 0
 
 
-
+itemsDelay($delay)
+  for num in 1..10
+    &:nth-child({num})
+      transition-delay ((num - 1) / (10 * $delay)) s
 
 clearfix()
   &:after

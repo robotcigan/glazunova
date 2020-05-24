@@ -1,18 +1,18 @@
 $(document).ready(function() {
 
   // burger
-  // $('.burger').on('click', function() {
-  //   $(this).toggleClass('burger_active');
-  //   $('.mobile-menu').slideToggle();
-  //   $('.mobile-menu').toggleClass('mobile-menu_active');
-  //   $('.logo').toggleClass('logo_white');
-  //   $('.header').toggleClass('header_mobile-menu-open');
-  // });
+  $('.burger').on('click', function() {
+    $(this).toggleClass('burger_active');
+    $('.mobile-menu').toggleClass('mobile-menu_active');
+    // $('.logo').toggleClass('logo_white');
+    $('.header').toggleClass('header_mobile-menu-open');
+  });
 
-  // $('.mobile-menu-accordion').on('click', function () {
-  //   $(this).find('.mobile-menu__link-container').slideToggle();
-  //   $(this).find('.mobile-menu__link_big').toggleClass('mobile-menu__link_big_active');
-  // })
+  $('.mobile-menu-accordion').on('click', function () {
+    $(this).find('.mobile-menu__link-container').slideToggle();
+    $(this).find('.mobile-menu__link_big').toggleClass('mobile-menu__link_big_active');
+  })
+
 
   // модалки
   $('.modal-open').fancybox({

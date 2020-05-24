@@ -28,6 +28,12 @@ $(document).ready(function() {
   // .addIndicators()
   .addTo(controller);
 
+
+  // Page height fix
+  // $('.page').css({
+  //   'margin-bottom': $('.footer').outerHeight()
+  // });
+
   
   // blind
   $('.header__blind').on('mouseover', function() {

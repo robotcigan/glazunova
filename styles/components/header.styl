@@ -17,8 +17,8 @@
     align-items center
     display flex
     justify-content space-between
-    padding-bottom 1.2rem
-    padding-top 1.2rem
+    // padding-bottom 1.2rem
+    // padding-top 1.2rem
     transition $transition2
   &__left
     align-items center
@@ -28,8 +28,10 @@
     display flex
   .logo
     flex-shrink 0
-    max-width 20rem
+    max-width 148px
     margin-right 2.4em
+    img
+      width 100%
   &__search
     margin-right 1.5em
   &__blind
@@ -43,47 +45,106 @@
     font-size 1.4rem
     margin-right 1.5em
   &__btn
+    background-color transparent
+    border-radius $radius
     color $primary
     font-size 1.4rem
-    &:not(:last-child)
-      margin-right 1.5em
-    // &:hover
-    //   color $primary
-
+    margin-right 1.4rem
+    padding 1rem 1rem 1.3rem
+    position relative
+    transition $transition
+    &_sign
+      margin-right -.8rem
+    &:hover
+      background-color rgba($primary, .1)
+  &_mobile-menu-open
+    .logo
+      display none
+    .header
+      &__btn
+        display none
 
 
 .nav
   display flex
   &__link
-    position relative
+    // position relative
+    padding 1.2rem 0
     transition $transition
-    &:after
-      background-color $primary
-      bottom 1px
-      content ''
-      height 1px
-      left 0
-      position absolute
-      transition $transition
-      width 0
-    &:hover
-      &:after
-        width 100%
+    // width 100%
     &:not(:last-child)
       margin-right 1.5em
-    a
+    & > a
       color $main
       display flex
       font-size 1.4rem
       padding 2.4rem 0
-      position relative
+      // position relative
+      linkHover($primary)
+      &:before
+        background-color $primary
+        bottom -11px
+        z-index 20
+      &:after
+        // background-color teal
+        background-color transparent
+        content ''
+        left -10%
+        height 132%
+        position absolute
+        top -16%
+        width 120%
+        z-index 0
+    &:hover
+      & > a
+        color $primary
+        &:before
+          width 100%
+      .dropdown
+        opacity 1
+        pointer-events initial
+        &__link
+          opacity 1
+          transform none
 
+.dropdown
+  background-color #fff
+  border-top $border
+  box-shadow 0px 14px 20px -3px rgba($main, .1)
+  left 0
+  opacity 0
+  position absolute
+  pointer-events none
+  top 8.4rem
+  transition $transition
+  width 100%
+  &__container
+    display flex
+    padding 4rem 0
+  &__left
+    min-width 18.5rem
+    // min-width 29rem
+  &__title
+    color $gray
+    font-size 1.4rem
+  &__link
+    margin-bottom 1em
+    itemsDelay(2)
+    opacity 0
+    transition $transition
+    transform translateY(.5em)
+    a
+      display block
+      font-size 1.4rem
+      margin-right 1.5em
+      transition $transition
+      linkHover($primary)
 
 .burger
   display none
   position relative
   transition $transition
-  transform translateY(-4px)
+  transform translateY(-6px)
   width 3.2rem
   &:before,
   &:after
@@ -105,21 +166,25 @@
       transform rotate(-45deg) translateY(-6px)
       width 2.4rem
 
+
+
+
+
 .mobile-menu
-  background-color $main
-  left 0
-  display none
+  background-color #fff
+  left -100%
+  // display none
   position fixed
   size(100%)
   top 0
+  transition $transition2
   z-index 100
   &__container
-    padding 7.2rem 2.4rem
+    padding 4rem 2.4rem
   &__nav
     margin-bottom 1.2em
   &__link
-    color #fff
-    font-size 1.3rem
+    font-size 1.6rem
     font-weight 400
     margin-bottom .7em
     opacity 0
@@ -129,34 +194,12 @@
       &:nth-child({num})
         transition-delay (num / 30) s
     &_big
-      font-size 2rem
-      font-weight 700
-      margin-bottom .4em
-    &-section
-      display flex
-      justify-content space-between
-      width 100%
+      font-size 2.4rem
+      margin-bottom 1em
     &-container
       display none
       margin-bottom .5em
       margin-top .5em
-  &-accordion
-    position relative
-    .mobile-menu__link_big
-      display inline-block
-      // position relative
-      &:after
-        content url('/assets/img/mobile-accordion.svg')
-        display inline-block
-        transform translateY(5px)
-        transition $transition
-      &_active
-        &:after
-          transform rotate(180deg)
-  &__phone-container
-    align-items center
-    display flex
-    margin-bottom 2rem
   &__phone
     color #fff
     font-size 2rem
@@ -165,102 +208,58 @@
     .messenger
       height 2.4rem
   &_active
-    .logo
-      svg
-        #logo-mediaheads
-          fill #fff
-        #logo-sub
-          fill #fff
+    // display block
+    left 0
     .mobile-menu
       &__link
         opacity 1
         transform none
 
-
-
-@keyframes logoHoverAnimation
-  0%
-    opacity 0
-  100%
-    opacity 1
-
-
-@media(max-width 1800px)
-  .header
-    &__container
-      padding-bottom 0
-      padding-top 0
-    &__phone
-      &-container
-        margin-right 1.6rem
-    .logo
-      margin-right 4rem
-  .nav
-    justify-content initial
-    position initial
-    top 0
-    &__link
-      &:after
-        bottom -1px
-
-@media(max-width 1600px)
-  .header
-    .logo
-      max-width 16rem
-    .btn
-      padding 1.4rem .9rem
-    .messengers
-      .messenger
-        size(2.4rem)
-  .nav
-    &__link
-      &:not(:last-child)
-        margin-right .8em
-
 @media(max-width 1440px)
   .header
     .logo
-      margin-bottom -1rem
-      margin-right 2.4rem
-      max-width 14rem
-      svg
-        #logo-sub
-          display none
+      margin-right 1.6rem
+      max-width 13rem
+    &__search
+      margin-right 1em
+    &__blind
+      margin-right 1em
     &__phone
-      margin-right .8rem
+      margin-right 1em
+    &__btn
+      margin-right .6rem
+      &_sign
+        margin-right 0
   .nav
     &__link
-      a
-        font-size 1.6rem
-        letter-spacing 0
-        text-transform initial
-        padding-bottom 2.2em
-        padding-top 2.2em
-      &-number
-        display none
+      &:not(:last-child)
+        margin-right 1em
 
 
-@media(max-width 1250px)
-  .header_index
-    .logo
-      #logo-mediaheads
-        fill #fff
-  .burger
-    display block
+
+@media(max-width 1200px)
   .header
-    &__container
-      padding-bottom 1rem
-      padding-top 1rem
-    &__contacts
-      .btn
-        display none
+    padding 1.2rem 0
+    .logo
+      max-width 12rem
+    &__search
+      display none
+    &__blind
+      display none
+    &__btn
+      &_sign
+        margin-right 1.6rem
+    .burger
+      display block
   .nav
     display none
 
+
 @media(max-width 767px)
   .header
-    &__phone-container
+    margin-bottom 3.2rem
+    &__btn
+      &_payment
+        display none
+    &__phone
       display none
-
-
-

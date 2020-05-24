@@ -33,30 +33,13 @@ html(lang="ru")
       .mobile-menu__container
         .mobile-menu__nav
           .mobile-menu-accordion
-            .mobile-menu__link.mobile-menu__link_big Услуги
-            .mobile-menu__link-section
-              .mobile-menu__link-container
-                .mobile-menu__link: a(href="") Рекламные ролики
-                .mobile-menu__link: a(href="") Корпоративные фильмы
-                .mobile-menu__link: a(href="") Клипы
-                .mobile-menu__link: a(href="") Телепрограммы
-                .mobile-menu__link: a(href="") Анимационные ролики
-              .mobile-menu__link-container
-                .mobile-menu__link: a(href="") Рекламные ролики
-                .mobile-menu__link: a(href="") Корпоративные фильмы
-                .mobile-menu__link: a(href="") Клипы
-                .mobile-menu__link: a(href="") Телепрограммы
-                .mobile-menu__link: a(href="") Анимационные ролики
+            .mobile-menu__link.mobile-menu__link_big: a(href="") О клинике
+            .mobile-menu__link.mobile-menu__link_big: a(href="") Специалисты
+            .mobile-menu__link.mobile-menu__link_big: a(href="") Услуги
+            .mobile-menu__link.mobile-menu__link_big: a(href="") Цены
+            .mobile-menu__link.mobile-menu__link_big: a(href="") Контакты
 
-
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Портфолио
-          .mobile-menu__link.mobile-menu__link_big: a(href="") О нас
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Контакты
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Клиенты
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Блог
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Фотоальбом
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Вакансии
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Отзывы
+            .mobile-menu__link: a(href="") Блог
         .mobile-menu__phone-container
           a(href="tel:79882459001").mobile-menu__phone +7 988 245-90-01
         .btn
@@ -70,35 +53,38 @@ html(lang="ru")
         .header__container.wrapper
           .header__left
             a(href="./pages.html").logo
-              img(src="./img/logo.svg", alt="").svg
+              img(src="./img/logo.svg", alt="")
             .nav
-              .nav__link: a(href="./about.html") О клинике
-              .dropdown
-                .dropdown__container
-                  .dropdown__section
-                    .dropdown__link.dropdown__link_big: a(href="") О клинике
-                    .dropdown__list
-                      .dropdown__link: a(href="") Рекламные ролики
-                      .dropdown__link: a(href="") Корпоративные фильмы
-                      .dropdown__link: a(href="") Клипы
-                      .dropdown__link: a(href="") Телепрограммы
-                  .dropdown__section
-                    .dropdown__list
-                      .dropdown__link: a(href="") Бактерии
-                      .dropdown__link: a(href="") Дрожжи
-                      .dropdown__link: a(href="") Инактивированные дрожжи
-                      .dropdown__link: a(href="") Подкормка
-                      .dropdown__link: a(href="") Ферменты
-                  .dropdown__section
-                    .dropdown__link.dropdown__link_big: a(href="") Другое
-                    .dropdown__list
-                      .dropdown__link: a(href="") Бактерии
-                      .dropdown__link: a(href="") Дрожжи
-                      .dropdown__link: a(href="") Инактивированные дрожжи
-                      .dropdown__link: a(href="") Подкормка
-                      .dropdown__link: a(href="") Ферменты
+              .nav__link
+                a(href="./about.html") О клинике
+                .dropdown
+                  .wrapper.dropdown__container
+                    .dropdown__left
+                      .dropdown__title О клинике
+                    .dropdown__right
+                      .dropdown__links
+                        .dropdown__link: a(href="") Блог
+                        .dropdown__link: a(href="") Часто спрашивают
+                        .dropdown__link: a(href="") Лицензии и документы
+                        .dropdown__link: a(href="") Карта сайта
+                        .dropdown__link: a(href="") Политика конфиденциальности
+                        .dropdown__link: a(href="") Онлайн-оплата
 
-              .nav__link: a(href="./specialists.html") Специалисты
+              .nav__link
+                a(href="./specialists.html") Специалисты
+                .dropdown
+                  .wrapper.dropdown__container
+                    .dropdown__left
+                      .dropdown__title Все
+                    .dropdown__right
+                      .dropdown__links
+                        .dropdown__link: a(href="") Блог
+                        .dropdown__link: a(href="") Часто спрашивают
+                        .dropdown__link: a(href="") Лицензии и документы
+                        .dropdown__link: a(href="") Карта сайта
+                        .dropdown__link: a(href="") Политика конфиденциальности
+                        .dropdown__link: a(href="") Онлайн-оплата
+
               .nav__link: a(href="./services.html") Услуги
               .nav__link: a(href="./price.html") Цены
               .nav__link: a(href="./contacts.html") Контакты
@@ -109,8 +95,8 @@ html(lang="ru")
               img(src="./img/eye.svg", alt="")
               .header__blind-link Для слабовидящих
             a(href="tel:79882459001").header__phone +7 988 245-90-01
-            a(href="").header__btn Оплатить онлайн
-            a(href="").header__btn Записаться
+            a(href="").header__btn.header__btn_payment Оплатить онлайн
+            a(href="").header__btn.header__btn_sign Записаться
             .burger
 
       block content
@@ -125,32 +111,36 @@ html(lang="ru")
                 img(src="./img/logo.svg", alt="").svg
             .col.col--xxl-2.col--lg-2.col--xs-6
               .footer__link: a(href="") Услуги
-              .footer__link: a(href="") Портфолио
-              .footer__link: a(href="") Клиенты
-              .footer__link: a(href="") Блог
-              .footer__link: a(href="") Фотоальбом
               .footer__link: a(href="") О нас
+              .footer__link: a(href="") Цены
+              .footer__link: a(href="") Наши специалисты
+              .footer__link: a(href="") Блог
             .col.col--xxl-2.col--lg-2.col--xs-6
+              .footer__link: a(href="") Контакты
+              .footer__link: a(href="") Лицензии и документы
               .footer__link: a(href="") Отзывы
               .footer__link: a(href="") Вакансии
-              .footer__link: a(href="") Контакты
-              .footer__link: a(href="") Анкета для кастинга
-              .footer__link: a(href="") Бриф на разработку
-              .footer__link: a(href="") Политика конфиденциальности
-            .col.col--xxl-2.col--lg-1.dn-lg
-            .col.col--xxl-3.col--lg-4
-              a(href="").footer__phone +7 988 245-90-01
-              a(href="").footer__mail zakaz@mediaheads.ru
-              .socials.socials_white
+            //- .col.col--xxl-1
+            .col.col--xxl-2.col--lg-2
+              .socials
                 a(href="").social.social_insta
                   img(src="./img/insta.svg", alt="")
                 a(href="").social.social_vk
                   img(src="./img/vk.svg", alt="")
                 a(href="").social.social_facebook
                   img(src="./img/facebook.svg", alt="")
+            .col.col--xxl-3.col--lg-3
+              .footer__right
+                a(href="tel:+7 (918) 451-48-43").footer__phone +7 (918) 451-48-43
+                a(href="mailto:clinicglazunova@gmail.com").footer__mail clinicglazunova@gmail.com
           .footer__bottom.animation-up.wow
-            .copyright 2020, © Компания «Media Heads»
-            p.disclamer Дополнительные материалы взяты из открытых источников
+            .copyright © 2020, Клиника Глазуновой
+            .footer__bottom-links
+              .footer__link: a(href="") Политика конфиденциальности
+              .footer__link: a(href="") Карта сайта
+            .madeby Digital consulting и разработка — 
+              a(href="") thisdesign.ru
+
 
 
 

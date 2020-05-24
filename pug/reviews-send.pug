@@ -1,0 +1,49 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header
+              h1.inner-header__title Оставить отзыв
+
+            .tabs
+              .tabs__header
+                a(href="./reviews.html").tabs__link Отзывы
+                a(href="./reviews-send.html").tabs__link.tabs__link_active Оставить отзыв
+
+            .container
+              .col.col--sm-6
+                .payment-form
+                  form
+                    .form-control
+                      label.form-control__label ФИО
+                      input(type="text" placeholder="Иванов Иван Иванович")
+                    .form-control.form-control_error
+                      label.form-control__label Телефон
+                      input(type="text" placeholder="+7 (___) ___  __  __").phone-mask
+                    .form-control
+                      label.form-control__label Электронная почта
+                      input(type="email" placeholder="sample@gmail.com")
+                    .form-control
+                      label.form-control__label Ваш отзыв
+                      textarea
+                    small Нажимая кнопку «Записаться» я соглашаюсь на 
+                      a(href="") обработку моих персональных данных
+                    .btn
+                      .btn__text Отправить
+              .col.col--sm-1
+              .col.col--sm-3
+                .attentions
+                  .attention.attention_red.wow.fade-up
+                    p Заполните все поля
+
+
+
+
+
+
+
+
