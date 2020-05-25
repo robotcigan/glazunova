@@ -85,6 +85,7 @@
   input[type="email"],
   input[type="tel"],
   input[type="number"],
+  input[type="search"],
   select,
   textarea,
   .custom-select
@@ -134,6 +135,7 @@
     input[type="email"],
     input[type="tel"],
     input[type="number"],
+    input[type="search"],
     select,
     textarea,
     .select2-selection--single
@@ -247,22 +249,25 @@
 
 
 
-
-@media(max-width 1500px)
-  .clicker
-    margin-right 1.2rem
-    input
-      padding-left 0
-      padding-right 0
-      width 5.6rem
-    &__minus,
-    &__plus
-      padding 1.4rem 2.4rem
-
-
 @media(max-width 767px)
   .btn
     padding 1.4em 1.2em
+  .form-control
+    margin-bottom 1.2rem
+    &__label
+      font-size 1.4rem
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="search"],
+    select,
+    textarea,
+    .custom-select
+      font-size 1.4rem
+      padding 1.6rem 1.6rem
 
 
 

@@ -10,23 +10,35 @@
     <link rel="stylesheet" href="./styles/css/main.css">
   </head>
   <body>
-    <div class="mobile-menu-bg"></div>
     <div class="mobile-menu">
+      <div class="mobile-menu__close"><img src="./img/mobile-menu-close.svg" alt=""></div>
       <div class="mobile-menu__container">
         <div class="mobile-menu__nav">
-          <div class="mobile-menu-accordion">
-            <div class="mobile-menu__link mobile-menu__link_big"><a href="">О клинике</a></div>
-            <div class="mobile-menu__link mobile-menu__link_big"><a href="">Специалисты</a></div>
-            <div class="mobile-menu__link mobile-menu__link_big"><a href="">Услуги</a></div>
-            <div class="mobile-menu__link mobile-menu__link_big"><a href="">Цены</a></div>
-            <div class="mobile-menu__link mobile-menu__link_big"><a href="">Контакты</a></div>
-            <div class="mobile-menu__link"><a href="">Блог</a></div>
-          </div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">О клинике</a></div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Специалисты</a></div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Услуги</a></div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Цены</a></div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Контакты</a></div>
+          <div class="mobile-menu__link"><a href="">Блог</a></div>
+          <div class="mobile-menu__link"><a href="">Лицензии и документы</a></div>
+          <div class="mobile-menu__link"><a href="">Отзывы</a></div>
+          <div class="mobile-menu__link"><a href="">Вакансии</a></div>
+          <div class="mobile-menu__link"><a href="">Политика конфиденциальности</a></div>
+          <div class="mobile-menu__link"><a href="">Карта сайта</a></div>
         </div>
-        <div class="mobile-menu__phone-container"><a class="mobile-menu__phone" href="tel:79882459001">+7 988 245-90-01</a></div>
-        <div class="btn">
-          <div class="btn__text">Рассчитать стоимость</div>
+        <div class="mobile-menu__buttons">
+          <div class="mobile-menu__btn">Оплатить онлайн</div>
+          <div class="mobile-menu__btn">Записаться</div>
         </div>
+        <div class="form-control">
+          <input type="text" placeholder="Что ищем?">
+        </div><a class="blind-btn" href=""><img src="./img/eye.svg" alt="">
+          <div class="blind-btn-link">Для слабовидящих</div></a>
+      </div>
+      <div class="mobile-menu__container mobile-menu__container_orange">
+        <div class="socials"><a class="social social_insta" href=""><img src="./img/insta.svg" alt=""></a><a class="social social_vk" href=""><img src="./img/vk.svg" alt=""></a><a class="social social_facebook" href=""><img src="./img/facebook.svg" alt=""></a></div>
+        <div class="mobile-menu__phone"><a class="mobile-menu__phone" href="tel:79882459001">+7 988 245-90-01</a></div>
+        <div class="mobile-menu__mail"><a href="mailto:clinicglazunova@gmail.com">clinicglazunova@gmail.com</a></div>
       </div>
     </div>
     <main class="page">
@@ -79,8 +91,8 @@
             </div>
           </div>
           <div class="header__right">
-            <div class="header__search"><img src="./img/search.svg" alt=""></div><a class="header__blind" href=""><img src="./img/eye.svg" alt="">
-              <div class="header__blind-link">Для слабовидящих</div></a><a class="header__phone" href="tel:79882459001">+7 988 245-90-01</a><a class="header__btn header__btn_payment" href="">Оплатить онлайн</a><a class="header__btn header__btn_sign" href="">Записаться</a>
+            <div class="header__search"><img src="./img/search.svg" alt=""></div><a class="blind-btn" href=""><img src="./img/eye.svg" alt="">
+              <div class="blind-btn__link">Для слабовидящих</div></a><a class="header__phone" href="tel:79882459001">+7 988 245-90-01</a><a class="header__btn header__btn_payment" href="">Оплатить онлайн</a><a class="header__btn header__btn_sign" href="">Записаться</a>
             <div class="burger"></div>
           </div>
         </div>
@@ -174,26 +186,32 @@
         <div class="wrapper">
           <div class="container">
             <div class="col col--xxl-3 col--lg-3">
-              <div class="logo"><img class="svg" src="./img/logo.svg" alt=""></div>
+              <div class="logo"><img src="./img/logo.svg" alt=""></div>
             </div>
-            <div class="col col--xxl-2 col--lg-2 col--xs-6">
+            <div class="col col--xxl-2 col--lg-3 col--xs-6">
+              <div class="footer__link"><a href="">О клинике</a></div>
+              <div class="footer__link"><a href="">Специалисты</a></div>
               <div class="footer__link"><a href="">Услуги</a></div>
-              <div class="footer__link"><a href="">О нас</a></div>
               <div class="footer__link"><a href="">Цены</a></div>
-              <div class="footer__link"><a href="">Наши специалисты</a></div>
-              <div class="footer__link"><a href="">Блог</a></div>
-            </div>
-            <div class="col col--xxl-2 col--lg-2 col--xs-6">
               <div class="footer__link"><a href="">Контакты</a></div>
-              <div class="footer__link"><a href="">Лицензии и документы</a></div>
+            </div>
+            <div class="col col--xxl-2 col--lg-3 col--xs-6">
+              <div class="footer__link"><a href="">Блог</a></div>
+              <div class="footer__link"><a href="">Часто спрашивают</a></div>
+              <div class="footer__link"><a href="">Онлайн-оплата</a></div>
               <div class="footer__link"><a href="">Отзывы</a></div>
               <div class="footer__link"><a href="">Вакансии</a></div>
+              <div class="footer__link"><a href="">Лицензии и документы</a></div>
             </div>
-            <div class="col col--xxl-2 col--lg-2">
-              <div class="socials"><a class="social social_insta" href=""><img src="./img/insta.svg" alt=""></a><a class="social social_vk" href=""><img src="./img/vk.svg" alt=""></a><a class="social social_facebook" href=""><img src="./img/facebook.svg" alt=""></a></div>
-            </div>
-            <div class="col col--xxl-3 col--lg-3">
-              <div class="footer__right"><a class="footer__phone" href="tel:+7 (918) 451-48-43">+7 (918) 451-48-43</a><a class="footer__mail" href="mailto:clinicglazunova@gmail.com">clinicglazunova@gmail.com</a></div>
+            <div class="col col--xxl-5 col--lg-3">
+              <div class="container">
+                <div class="col col--xl-4 col--md-12 col--xs-6">
+                  <div class="socials"><a class="social social_insta" href=""><img src="./img/insta.svg" alt=""></a><a class="social social_vk" href=""><img src="./img/vk.svg" alt=""></a><a class="social social_facebook" href=""><img src="./img/facebook.svg" alt=""></a></div>
+                </div>
+                <div class="col col--xl-8 col--md-12 col--xs-6">
+                  <div class="footer__right"><a class="footer__phone" href="tel:+7 (918) 451-48-43">+7 (918) 451-48-43</a><a class="footer__mail" href="mailto:clinicglazunova@gmail.com">clinicglazunova@gmail.com</a></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="footer__bottom animation-up wow">

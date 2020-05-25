@@ -2,16 +2,17 @@ $(document).ready(function() {
 
   // burger
   $('.burger').on('click', function() {
-    $(this).toggleClass('burger_active');
+    // $(this).toggleClass('burger_active');
     $('.mobile-menu').toggleClass('mobile-menu_active');
-    // $('.logo').toggleClass('logo_white');
-    $('.header').toggleClass('header_mobile-menu-open');
+    $('.page').addClass('page_mobile-menu-open');
+    // $('.header').toggleClass('header_mobile-menu-open');
   });
 
-  $('.mobile-menu-accordion').on('click', function () {
-    $(this).find('.mobile-menu__link-container').slideToggle();
-    $(this).find('.mobile-menu__link_big').toggleClass('mobile-menu__link_big_active');
-  })
+  // mobile menu close
+  $('.mobile-menu__close').on('click', function() {
+    $('.mobile-menu').removeClass('mobile-menu_active');
+    $('.page').removeClass('page_mobile-menu-open');
+  });
 
 
   // модалки

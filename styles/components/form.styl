@@ -1,6 +1,6 @@
 .form
   background-color $light-gray
-  padding 8rem
+  padding 8rem 0
   &__container
     align-items center
     display flex
@@ -27,6 +27,8 @@
   &__text
     background-color $primary-light
     padding 3.2rem 4rem
+    transition $transition2
+    transition-delay 4s
     &:first-child
       border-radius 32px 32px 0 32px
     &:last-child
@@ -43,8 +45,26 @@
         animation message-img 2s infinite ease .3s
       #message-circle-3
         animation message-img 2s infinite ease .7s
+    &_loading
+      transition-delay 4s
+    &_second
+      display none
+      opacity 0
+      transform translateY(1rem)
+      transition-delay 4s
 
 
+.form
+  &.animated
+    .form-message
+      &__text
+        &_loading
+          // display none
+          opacity .5
+        &_second
+          display block
+          opacity 1
+          transform none
 
 
 @keyframes message-img
@@ -57,3 +77,52 @@
   100%
     transform none
     opacity .3
+
+@media(max-width 1440px)
+  .form
+    &__left
+      width 46%
+    &__right
+      width 50%
+    &__person
+      size(24rem)
+
+
+@media(max-width 1200px)
+  .form
+    &__container
+      flex-direction column
+    &__left
+      width 100%
+    &__right
+      display flex
+      justify-content flex-end
+      margin-bottom 4.8rem
+      order -1
+      width 100%
+    // &__person
+    //   size(32rem)
+
+@media(max-width 767px)
+  .form
+    padding-bottom 4rem
+    padding-top 4rem
+    &__right
+      justify-content initial
+    &__person
+      order -1
+      margin-right 1.2rem
+      size(8rem)
+    .container
+      grid-row-gap 0
+  .form-message
+    margin-right 0
+    width initial
+    &__text
+      padding 1rem 1.8rem
+      &:first-child
+        border-radius 8px 8px 0 8px
+      &:not(:last-child)
+        margin-bottom .8rem
+  
+

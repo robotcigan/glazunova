@@ -29,7 +29,8 @@
     font-size 1.4rem
     margin-bottom 2em
   &__title
-    margin-left -6px
+    // margin-left -6px
+    margin-left -.1em
     max-width 100rem
   &__p
     max-width 72rem
@@ -123,9 +124,45 @@
 
 
 
+@media(max-width 1200px)
+  .sticky-btn
+    top 12rem
+    &__text-container
+      margin-right 1em
+    &_scroll
+      .sticky-btn
+        &__icon
+          &:before
+            left 0
+            size(6.4rem)
+            top 0
 
 
-
-
+@media(max-width 767px)
+  .inner-block
+    display block
+    &__right
+      display block
+      width 100%
+  .sticky-btn
+    position initial
+    &__icon
+      margin-right 1.6rem
+      order -1
+    &__text-container
+      margin-right .5em
+      order 2
+      position initial
+    &__text
+      text-align left
+    &_scroll
+      .sticky-btn
+        &__text
+          opacity 1
+          transform none
+  .inner-header
+    &_bordered
+      margin-bottom 3.2rem
+      padding-bottom .8rem
 
 

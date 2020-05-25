@@ -6,6 +6,9 @@
   // position fixed
   // width 100%
   // z-index -1
+  .logo
+    img
+      max-width 14.8rem
   &__link
     font-size 1.6rem
     margin-bottom 1.2em
@@ -58,6 +61,20 @@
     linkHover($primary)
 
 
+@media(max-width 1200px)
+  .footer
+    &__right
+      text-align left
+    .socials
+      margin-bottom 1.6rem
+    &__bottom
+      display block
+      &-links
+        margin-bottom .5em
+    .copyright
+      margin-bottom .5em
+
+
 @media(max-width 1000px)
   .footer
     &__bottom
@@ -75,12 +92,6 @@
     &__link
       font-size 1.4rem
       margin-bottom 1em
-    .logo
-      svg
-        #logo-sub
-          display none
-    &__phone
-      font-size 3.2rem
   .copyright,
   .disclamer
     margin-bottom 1em

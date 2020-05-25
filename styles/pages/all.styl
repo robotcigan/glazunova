@@ -1,7 +1,10 @@
 .page
   // background-color #fff
+  transition $transition2
   &_blind
     filter grayscale(100%) contrast(1)
+  &_mobile-menu-open
+    transform translateX(10rem)
 
 // .page
 //   min-height calc(100vh)
@@ -42,3 +45,20 @@ hr,
 .date
   color $gray
   font-size 1.4rem
+
+
+@media(max-width 1200px)
+  .section
+    margin-bottom 12rem
+
+@media(max-width 1000px)
+  .section
+    margin-bottom 8rem
+
+@media(max-width 767px)
+  .section
+    margin-bottom 6.4rem
+
+
+
+

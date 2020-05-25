@@ -36,10 +36,10 @@ $(document).ready(function() {
 
   
   // blind
-  $('.header__blind').on('mouseover', function() {
+  $('.blind-btn').on('mouseover', function() {
     $('.page').addClass('page_blind');
   });
-  $('.header__blind').on('mouseout', function() {
+  $('.blind-btn').on('mouseout', function() {
     $('.page').removeClass('page_blind');
   });
 

@@ -34,13 +34,6 @@
       width 100%
   &__search
     margin-right 1.5em
-  &__blind
-    display flex
-    margin-right 1.5em
-    img
-      margin-right 4px
-    &-link
-      font-size 1.4rem
   &__phone
     font-size 1.4rem
     margin-right 1.5em
@@ -57,12 +50,20 @@
       margin-right -.8rem
     &:hover
       background-color rgba($primary, .1)
-  &_mobile-menu-open
-    .logo
-      display none
-    .header
-      &__btn
-        display none
+  // &_mobile-menu-open
+  //   .logo
+  //     display none
+  //   .header
+  //     &__btn
+  //       display none
+
+.blind-btn
+  display flex
+  margin-right 1.5em
+  img
+    margin-right 4px
+  &-link
+    font-size 1.4rem
 
 
 .nav
@@ -120,7 +121,8 @@
   width 100%
   &__container
     display flex
-    padding 4rem 0
+    padding-bottom 4rem
+    padding-top 4rem
   &__left
     min-width 18.5rem
     // min-width 29rem
@@ -173,47 +175,88 @@
 .mobile-menu
   background-color #fff
   left -100%
-  // display none
+  // left 0
+  overflow scroll
   position fixed
   size(100%)
   top 0
   transition $transition2
-  z-index 100
+  z-index 200
   &__container
+    opacity 0
     padding 4rem 2.4rem
+    transition $transition2
+    transform translateY(4rem)
+    transition-delay .3s
+    &_orange
+      background-color #FBF6F3
   &__nav
-    margin-bottom 1.2em
+    margin-bottom 1.5em
   &__link
-    font-size 1.6rem
+    color $gray-text
+    font-size 1.4rem
     font-weight 400
-    margin-bottom .7em
+    margin-bottom 1em
     opacity 0
     transition $transition2
-    transform translateY(-2rem)
-    for num in (1..12)
-      &:nth-child({num})
-        transition-delay (num / 30) s
+    transform translateY(2em)
+    itemsDelay(2)
     &_big
+      color $main
       font-size 2.4rem
       margin-bottom 1em
-    &-container
-      display none
-      margin-bottom .5em
-      margin-top .5em
+  &__buttons
+    margin-bottom 3.2rem
+  &__btn
+    color $primary
+    font-size 1.4rem
+    itemsDelay(2)
+    margin-bottom 1em
+    transition $transition2
+  .form-control
+    input
+      font-size 1.4rem
+      padding 1.6rem 2rem 1.8rem
   &__phone
-    color #fff
-    font-size 2rem
+    font-size 1.4rem
+    margin-bottom 1em
     margin-right .5em
-  .messengers
-    .messenger
-      height 2.4rem
+  &__mail
+    margin-bottom 1em
+    a
+      font-size 1.4rem
+      color $primary
+  &__close
+    opacity 0
+    position absolute
+    transition $transition
+    right 3.2rem
+    top 3.2rem
+  .socials
+    margin-bottom 2.4rem
+    position relative
+    z-index 10
+    .social
+      &:before,
+      &:after
+        background-color #fff
   &_active
-    // display block
     left 0
     .mobile-menu
+      &__container
+        opacity 1
+        transform none
       &__link
         opacity 1
         transform none
+      &__close
+        opacity 1
+      &__link
+        opacity 1
+        transform none
+
+
+
 
 @media(max-width 1440px)
   .header
@@ -222,7 +265,7 @@
       max-width 13rem
     &__search
       margin-right 1em
-    &__blind
+    .blind-btn
       margin-right 1em
     &__phone
       margin-right 1em
@@ -244,7 +287,7 @@
       max-width 12rem
     &__search
       display none
-    &__blind
+    .blind-btn
       display none
     &__btn
       &_sign

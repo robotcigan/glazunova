@@ -27,23 +27,52 @@ html(lang="ru")
     //-     img(src="./img/slider-arrow-right.svg", alt="")
 
 
-    .mobile-menu-bg
+    //- .mobile-menu-bg
 
     .mobile-menu
+      .mobile-menu__close
+        img(src="./img/mobile-menu-close.svg", alt="")
+
       .mobile-menu__container
         .mobile-menu__nav
-          .mobile-menu-accordion
-            .mobile-menu__link.mobile-menu__link_big: a(href="") О клинике
-            .mobile-menu__link.mobile-menu__link_big: a(href="") Специалисты
-            .mobile-menu__link.mobile-menu__link_big: a(href="") Услуги
-            .mobile-menu__link.mobile-menu__link_big: a(href="") Цены
-            .mobile-menu__link.mobile-menu__link_big: a(href="") Контакты
+          .mobile-menu__link.mobile-menu__link_big: a(href="") О клинике
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Специалисты
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Услуги
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Цены
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Контакты
 
-            .mobile-menu__link: a(href="") Блог
-        .mobile-menu__phone-container
+          .mobile-menu__link: a(href="") Блог
+          .mobile-menu__link: a(href="") Лицензии и документы
+          .mobile-menu__link: a(href="") Отзывы
+          .mobile-menu__link: a(href="") Вакансии
+          .mobile-menu__link: a(href="") Политика конфиденциальности
+          .mobile-menu__link: a(href="") Карта сайта
+
+        .mobile-menu__buttons
+          .mobile-menu__btn Оплатить онлайн
+          .mobile-menu__btn Записаться
+
+        .form-control
+          input(type="text" placeholder="Что ищем?")
+
+        a(href="").blind-btn
+          img(src="./img/eye.svg", alt="")
+          .blind-btn-link Для слабовидящих
+
+      .mobile-menu__container.mobile-menu__container_orange
+
+        .socials
+          a(href="").social.social_insta
+            img(src="./img/insta.svg", alt="")
+          a(href="").social.social_vk
+            img(src="./img/vk.svg", alt="")
+          a(href="").social.social_facebook
+            img(src="./img/facebook.svg", alt="")
+
+        .mobile-menu__phone
           a(href="tel:79882459001").mobile-menu__phone +7 988 245-90-01
-        .btn
-          .btn__text Рассчитать стоимость
+        .mobile-menu__mail
+          a(href="mailto:clinicglazunova@gmail.com") clinicglazunova@gmail.com
 
 
 
@@ -91,9 +120,9 @@ html(lang="ru")
           .header__right
             .header__search
               img(src="./img/search.svg", alt="")
-            a(href="").header__blind
+            a(href="").blind-btn
               img(src="./img/eye.svg", alt="")
-              .header__blind-link Для слабовидящих
+              .blind-btn__link Для слабовидящих
             a(href="tel:79882459001").header__phone +7 988 245-90-01
             a(href="").header__btn.header__btn_payment Оплатить онлайн
             a(href="").header__btn.header__btn_sign Записаться
@@ -108,31 +137,36 @@ html(lang="ru")
           .container
             .col.col--xxl-3.col--lg-3
               .logo
-                img(src="./img/logo.svg", alt="").svg
-            .col.col--xxl-2.col--lg-2.col--xs-6
+                img(src="./img/logo.svg", alt="")
+            .col.col--xxl-2.col--lg-3.col--xs-6
+              .footer__link: a(href="") О клинике
+              .footer__link: a(href="") Специалисты
               .footer__link: a(href="") Услуги
-              .footer__link: a(href="") О нас
               .footer__link: a(href="") Цены
-              .footer__link: a(href="") Наши специалисты
-              .footer__link: a(href="") Блог
-            .col.col--xxl-2.col--lg-2.col--xs-6
               .footer__link: a(href="") Контакты
-              .footer__link: a(href="") Лицензии и документы
+            .col.col--xxl-2.col--lg-3.col--xs-6
+              .footer__link: a(href="") Блог
+              .footer__link: a(href="") Часто спрашивают
+              .footer__link: a(href="") Онлайн-оплата
               .footer__link: a(href="") Отзывы
               .footer__link: a(href="") Вакансии
-            //- .col.col--xxl-1
-            .col.col--xxl-2.col--lg-2
-              .socials
-                a(href="").social.social_insta
-                  img(src="./img/insta.svg", alt="")
-                a(href="").social.social_vk
-                  img(src="./img/vk.svg", alt="")
-                a(href="").social.social_facebook
-                  img(src="./img/facebook.svg", alt="")
-            .col.col--xxl-3.col--lg-3
-              .footer__right
-                a(href="tel:+7 (918) 451-48-43").footer__phone +7 (918) 451-48-43
-                a(href="mailto:clinicglazunova@gmail.com").footer__mail clinicglazunova@gmail.com
+              .footer__link: a(href="") Лицензии и документы
+              //- .footer__link: a(href="") Карта сайта
+              //- .footer__link: a(href="") Политика конфиденциальности
+            .col.col--xxl-5.col--lg-3
+              .container
+                .col.col--xl-4.col--md-12.col--xs-6
+                  .socials
+                    a(href="").social.social_insta
+                      img(src="./img/insta.svg", alt="")
+                    a(href="").social.social_vk
+                      img(src="./img/vk.svg", alt="")
+                    a(href="").social.social_facebook
+                      img(src="./img/facebook.svg", alt="")
+                .col.col--xl-8.col--md-12.col--xs-6
+                  .footer__right
+                    a(href="tel:+7 (918) 451-48-43").footer__phone +7 (918) 451-48-43
+                    a(href="mailto:clinicglazunova@gmail.com").footer__mail clinicglazunova@gmail.com
           .footer__bottom.animation-up.wow
             .copyright © 2020, Клиника Глазуновой
             .footer__bottom-links
