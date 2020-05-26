@@ -1,0 +1,190 @@
+.search
+  // background-color #fff
+  display block
+  left 0
+  opacity 0
+  padding 6.4rem
+  position fixed
+  // visibility hidden
+  pointer-events none
+  transition $transition
+  top 0
+  width 100%
+  z-index 200
+  &:before
+    background-color rgba(black, .5)
+    content ''
+    height 100vh
+    left 0
+    opacity 0
+    position absolute
+    pointer-events none
+    top 0
+    transition $transition2
+    transition-delay .1s
+    width 100%
+  &:after
+    background-color #fff
+    content ''
+    left 0
+    height 0
+    position absolute
+    transition $transition2
+    top 0
+    width 100%
+    z-index 0
+  .container
+    position relative
+    z-index 10
+  &__form
+    display flex
+    margin-bottom 4rem
+    opacity 0
+    position relative
+    transform translateY(1rem)
+    transition all .6s cubic-bezier(.4,0,0,1)
+    transition-delay .3s
+  &__input
+    border 0
+    border-bottom $border
+    border-radius 0
+    font-family $font
+    font-size 2.4rem
+    padding 1.4rem 0
+    width 100%
+    -webkit-appearance none
+  &__button
+    border none
+    background-color transparent
+    cursor pointer
+    display block
+    margin 0
+    padding 0
+    position absolute
+    transition $transition
+    right 0
+    top .8rem
+    size(4.8rem)
+    &:hover
+      background-color $light-gray
+  &__examples
+    display flex
+    flex-wrap wrap
+    opacity 0
+    transform translateY(1rem)
+    transition all .6s cubic-bezier(.4,0,0,1)
+    transition-delay .4s
+  &__example-word
+    margin-right 1.5em
+  &__example
+    color $primary
+    display inline-block
+    flex-shrink 0
+    linkHover($primary)
+    &:not(:last-child)
+      margin-right 1.5em
+
+  &__close
+    align-items center
+    // background-color $primary
+    cursor pointer
+    display flex
+    justify-content center
+    // position relative
+    position absolute
+    right -2.4rem
+    size(4rem)
+    transition $transition
+    transform translate(2.4rem, 1rem)
+    &:before,
+    &:after
+      background-color $gray
+      content ''
+      height 1px
+      left 1.6rem
+      position absolute
+      top 1.6rem
+      transition all .3s ease
+      width 1.6rem
+    &:before
+      transform rotate(45deg) translateY(6px)
+      // width 1.6rem
+    &:after
+      top 2.4rem
+      transform rotate(-45deg) translateY(-6px)
+      // width 1.6rem
+
+  &_active
+    opacity 1
+    pointer-events initial
+    // visibility visible
+    &:before
+      opacity 1
+    &:after
+      height 26rem
+    .search
+      &__examples,
+      &__form
+        opacity 1
+        transform none
+        transition-delay 0s
+  &_results
+    opacity 1
+    padding 3.2rem 0
+    position initial
+    pointer-events initial
+    p
+      text-align center
+    .search
+      &__form
+        opacity 1
+      &__input
+        background-color transparent
+
+
+
+
+@media(max-width 1200px)
+  .search
+    padding 4rem
+    &_active
+      &:after
+        height 24rem
+
+@media(max-width 767px)
+  .search
+    padding 2rem
+    &__form
+      margin-bottom 2.4rem
+      width 95%
+    &__example-word
+      color $gray
+      display block
+      font-size 1.2rem
+      margin-bottom 1em
+      width 100%
+    &__example
+      &:not(:last-child)
+        margin-right 1em
+    &__close
+      right -1.2rem
+      top 0
+    &_active
+      &:after
+        height 20rem
+
+
+@media(max-width 500px)
+  .search
+    flex-shrink 0
+    padding 1.6rem
+    .wrapper
+      padding 0
+    &_active
+      &:after
+        height 24rem
+      
+    &__button
+      right 0
+    &__example
+      margin-bottom .75em

@@ -18,11 +18,12 @@ block content
                   +webp('specialists/' + i, 'jpg')
                   .specialist__photo-hover
                     +webp('specialists/' + i + '-hover', 'jpg')
-                .specialist__name= specialists[i - 1]
-                .specialist__status-container
-                  .specialist__status Психиатр-психотерапевт
-                  .specialist__status Кандидат медицинских наук
-                  .specialist__status Член Российского общества психиатров
+                .specialist__container
+                  .specialist__name= specialists[i - 1]
+                  .specialist__status-container
+                    .specialist__status Психиатр-психотерапевт
+                    .specialist__status Кандидат медицинских наук
+                    .specialist__status Член Российского общества психиатров
 
 
   section.about-section.section

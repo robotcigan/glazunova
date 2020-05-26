@@ -49,6 +49,7 @@
   right 0
   top 16rem
   transform translateY(-4px)
+  transition $transition2
   &__icon
     align-items center
     // background-color $primary
@@ -124,9 +125,10 @@
 
 
 
+
 @media(max-width 1200px)
   .sticky-btn
-    top 12rem
+    top 10rem
     &__text-container
       margin-right 1em
     &_scroll
@@ -137,32 +139,57 @@
             size(6.4rem)
             top 0
 
+@media(max-width 1000px)
+  .inner-block
+    &__right
+      .sticky-btn
+        &__text-container
+          display none
 
 @media(max-width 767px)
-  .inner-block
-    display block
-    &__right
-      display block
-      width 100%
-  .sticky-btn
-    position initial
-    &__icon
-      margin-right 1.6rem
-      order -1
-    &__text-container
-      margin-right .5em
-      order 2
-      position initial
-    &__text
-      text-align left
-    &_scroll
-      .sticky-btn
-        &__text
-          opacity 1
-          transform none
   .inner-header
+    margin-bottom 4rem
     &_bordered
-      margin-bottom 3.2rem
-      padding-bottom .8rem
+      padding-bottom 1.6rem
+    p
+      margin-bottom 1em
+  .inner-block
+    &__right
+      bottom 0
+      position fixed
+      right 2.4rem
+      width initial
+      z-index 100
+  .sticky-btn
+    &_mobile-menu-open
+      opacity 0
+      transform translateY(2rem)
+
+// @media(max-width 767px)
+//   .inner-block
+//     display block
+//     &__right
+//       display block
+//       width 100%
+//   .sticky-btn
+//     position initial
+//     &__icon
+//       margin-right 1.6rem
+//       order -1
+//     &__text-container
+//       margin-right .5em
+//       order 2
+//       position initial
+//     &__text
+//       text-align left
+//     &_scroll
+//       .sticky-btn
+//         &__text
+//           opacity 1
+//           transform none
+//   .inner-header
+//     &_bordered
+//       margin-bottom 3.2rem
+//       padding-bottom .8rem
 
 

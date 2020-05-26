@@ -10,16 +10,12 @@ block content
               h1.inner-header__title Наши специалисты
 
 
-
           .inner-block__right
             a(href="").sticky-btn
               .sticky-btn__text-container
                 .sticky-btn__text Я не знаю к кому лучше обратиться, посоветуйте мне 
               .sticky-btn__icon
                 img(src="./img/whatsapp.svg", alt="")
-
-
-
 
         .tabs
           .tabs__header
@@ -28,8 +24,25 @@ block content
             a(href="").tabs__link Неврологи и терапевты
             a(href="").tabs__link Психологи
             a(href="").tabs__link Другие специалисты
+
         .container
-          - for (var i = 0; i < 30; i++)
+
+          - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
+          - for (var i = 1; i < 7; i++)
+            .col.col--sm-3
+              a(href="").specialist
+                .specialist__photo
+                  +webp('specialists/' + i, 'jpg')
+                  .specialist__photo-hover
+                    +webp('specialists/' + i + '-hover', 'jpg')
+                .specialist__container
+                  .specialist__name= specialists[i - 1]
+                  .specialist__status-container
+                    .specialist__status Психиатр-психотерапевт
+                    .specialist__status Кандидат медицинских наук
+                    .specialist__status Член Российского общества психиатров
+
+          - for (var a = 0; a < 24; a++)
             .col.col--sm-3
               a(href="").specialist
                 .specialist__photo
@@ -42,7 +55,6 @@ block content
                   .specialist__status Психиатр-психотерапевт
                   .specialist__status Кандидат медицинских наук
                   .specialist__status Член Российского общества психиатров
-
 
 
 

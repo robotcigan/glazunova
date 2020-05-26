@@ -1,0 +1,24 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.inner-header_bordered.wow
+              h1.inner-header__title Поиск
+              p По запросу «Психотерапия» найдено совпадений: 4
+
+        section.section.search-items
+          - for (var i = 0; i < 10; i++)
+            .search-item
+              a(href="").search-item__page услуги
+              p.search-item__text 
+                a(href="") Психотерапия
+                |  это Код, как бы это ни казалось парадоксальным, изящно отталкивает когнитивный тест. Лидерство интегрирует гештальт. Л.С.Выготский понимал тот факт, что коллективное бессознательное гомогенно психотерапия дает латентный эскапизм. Конформность представляет собой инсайт.
+
+
+        include pagination.pug
+
+

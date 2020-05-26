@@ -20,7 +20,8 @@
 
 
 .faq
-  border-bottom $border
+  &:not(:last-child)
+    border-bottom $border
   &:first-child
     .faq
       &__title
@@ -48,9 +49,9 @@
     img
       transition $transition
   &__title
-    font-size 2.4rem
+    font-size 2rem
     line-height 1.2
-    padding 1em 0
+    padding 1.2em 0
     padding-right 1.5em
   &__text
     display none
@@ -80,4 +81,33 @@
     opacity 1
     transform none
 
+
+@media(max-width 1200px)
+  .faq-link
+    font-size 1.6rem
+  .faq
+    &__title
+      font-size 1.6rem
+    &__arrow
+      circleHover(3.2rem, #eee, $second)
+    &__text
+      padding-right 0
+
+
+@media(max-width 767px)
+  .faq-links
+    overflow hidden
+    margin-left -2.4rem
+    margin-right -2.4rem
+    &__container
+      display flex
+      overflow-x scroll
+      padding 0 2.4rem
+      overflow-y hidden
+      -webkit-overflow-scrolling touchr
+  .faq-link
+    font-size 1.4rem
+    flex-shrink 0
+    margin-right 2em
+      
 

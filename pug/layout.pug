@@ -104,15 +104,29 @@ html(lang="ru")
                 .dropdown
                   .wrapper.dropdown__container
                     .dropdown__left
-                      .dropdown__title Все
+                      .dropdown__nav
+                        .dropdown__nav-link.dropdown__nav-link Психиатры и психотерапевты
+                        .dropdown__nav-link Неврологи и терапевты
+                        .dropdown__nav-link Психологи
+                        .dropdown__nav-link Другие специалисты
+                        .dropdown__nav-link Все специалисты
                     .dropdown__right
-                      .dropdown__links
-                        .dropdown__link: a(href="") Блог
-                        .dropdown__link: a(href="") Часто спрашивают
-                        .dropdown__link: a(href="") Лицензии и документы
-                        .dropdown__link: a(href="") Карта сайта
-                        .dropdown__link: a(href="") Политика конфиденциальности
-                        .dropdown__link: a(href="") Онлайн-оплата
+                      .container
+                        - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
+                        - for (var i = 1; i < 12; i++)
+                          .col.col--sm-3
+                            a(href="").specialist
+                              .specialist__photo
+                                +webp('specialists/' + i, 'jpg')
+                                .specialist__photo-hover
+                                  +webp('specialists/' + i + '-hover', 'jpg')
+                              .specialist__container
+                                .specialist__name= specialists[i - 1]
+                                .specialist__status-container
+                                  .specialist__status Психиатр-психотерапевт
+                                  .specialist__status Кандидат медицинских наук
+                                  .specialist__status Член Российского общества психиатров
+
 
               .nav__link: a(href="./services.html") Услуги
               .nav__link: a(href="./price.html") Цены
@@ -124,9 +138,25 @@ html(lang="ru")
               img(src="./img/eye.svg", alt="")
               .blind-btn__link Для слабовидящих
             a(href="tel:79882459001").header__phone +7 988 245-90-01
-            a(href="").header__btn.header__btn_payment Оплатить онлайн
-            a(href="").header__btn.header__btn_sign Записаться
+            a(href="./online-payment.html").header__btn.header__btn_payment Оплатить онлайн
+            a(href="./sign.html").header__btn.header__btn_sign Записаться
             .burger
+
+      .search
+        .wrapper
+          .container
+            .col.col--xl-2.dn-xl
+            .col.col--xl-8
+              form.search__form
+                input(type="text" placeholder="Что вы ищете?").search__input
+                button.search__button
+                  img(src="./img/search.svg", alt="")
+                .search__close.search__close_active
+              .search__examples
+                .search__example-word Например:
+                a(href="").search__example Психотерапия
+                a(href="").search__example Стоимость приёма
+                a(href="").search__example Специалисты
 
       block content
       
@@ -155,7 +185,7 @@ html(lang="ru")
               //- .footer__link: a(href="") Политика конфиденциальности
             .col.col--xxl-5.col--lg-3
               .container
-                .col.col--xl-4.col--md-12.col--xs-6
+                .col.col--xxl-4.col--lg-12.col--sm-6
                   .socials
                     a(href="").social.social_insta
                       img(src="./img/insta.svg", alt="")
@@ -163,7 +193,7 @@ html(lang="ru")
                       img(src="./img/vk.svg", alt="")
                     a(href="").social.social_facebook
                       img(src="./img/facebook.svg", alt="")
-                .col.col--xl-8.col--md-12.col--xs-6
+                .col.col--xxl-8.col--lg-12.col--sm-6
                   .footer__right
                     a(href="tel:+7 (918) 451-48-43").footer__phone +7 (918) 451-48-43
                     a(href="mailto:clinicglazunova@gmail.com").footer__mail clinicglazunova@gmail.com
