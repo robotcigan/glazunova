@@ -27,7 +27,7 @@ h1, .h1
   line-height 1.2
   // letter-spacing -3px
   letter-spacing -.05em
-  margin-bottom .75em
+  margin-bottom .5em
   margin-top 0
   &_long
     font-size 4rem
@@ -39,7 +39,7 @@ h2, .h2
   line-height 1
   letter-spacing -2px
   margin-top 0
-  margin-bottom .75em
+  margin-bottom .5em
 
 h3, .h3
   font-family $font
@@ -54,8 +54,9 @@ h3, .h3
 h4, .h4
   font-family $font
   font-size 2.4rem
-  font-weight 700
-  margin-bottom .5em
+  font-weight 500
+  line-height (32 / 24)
+  margin-bottom .75em
   margin-top 0
 
 h5, .h5
@@ -136,32 +137,30 @@ ul
       background-color $gray
       border-radius 50%
       content ''
-      left -1.2em
+      left -.8em
       position absolute
-      size(6px)
-      top .6em
+      size(4px)
+      top .8em
       transition width 1s cubic-bezier(.4,0,0,1) .4s
 
 blockquote
-  border-bottom 1px solid $primary
-  border-top 1px solid $primary
-  font-size 3.2rem
-  line-height (44 / 32)
+  font-size 2.4rem
+  font-weight 500
+  line-height (32 / 24)
   margin 0
   margin-bottom 4rem
-  margin-left -10rem
-  margin-right -10rem
-  padding 3.2rem 6.4rem 4.8rem 10rem
   position relative
   &:before
-    // content url('../../img/quote.svg')
-    background url('../../img/quote.svg') no-repeat top left / contain
-    content ''
-    left 0
-    height 4rem
+    // align-items center
+    // background-color $primary-light
+    content url('../../img/services-quote.svg')
+    // border-radius 50%
+    // display flex
+    // justify-content center
+    left -5.6rem
     position absolute
-    top 1.2em
-    width 4.8rem
+    // size(4rem)
+    top -.6rem
 
 
 // @media(max-width 1200px)
@@ -170,15 +169,15 @@ blockquote
 
 @media(max-width 1200px)
   h1, .h1
-    font-size 5.6rem
+    font-size 4.8rem
     &_long
       font-size 4rem
   h2, .h2
-    font-size 4.8rem
+    font-size 4rem
   h3, .h3
     font-size 4rem
-  // h4, .h4
-  //   font-size 1.8rem
+  p
+    font-size 1.4rem
   ul
     padding-left 1.6rem
     li
@@ -197,8 +196,6 @@ blockquote
     font-size 2.4rem
   h4, .h4
     font-size 1.8rem
-  p
-    font-size 1.4rem
   ul
     // padding-left 0
     li

@@ -32,8 +32,14 @@
     // margin-left -6px
     margin-left -.1em
     max-width 100rem
+
   &__p
     max-width 72rem
+  &__subs
+    display flex
+  &__sub
+    &:not(:last-child)
+      margin-right 1.5em
   &.animated
     &:before
       width 100%
@@ -83,7 +89,7 @@
       z-index 10
   &__text-container
     overflow hidden
-    margin-right 2em
+    margin-right 1.5em
     position absolute
     right 5.6rem
   &__text
@@ -125,10 +131,14 @@
 
 
 
-
 @media(max-width 1200px)
+  .inner-header
+    &__title
+      max-width 72rem
+    &__sub
+      font-size 1.4rem
   .sticky-btn
-    top 10rem
+    top 8rem
     &__text-container
       margin-right 1em
     &_scroll

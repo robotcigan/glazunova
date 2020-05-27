@@ -12,7 +12,7 @@
     &__name
       font-size 4rem
       line-height 1.2
-      margin-right .75rem
+      margin-right .25em
       transition $transition
     &__icon
       overflow hidden
@@ -38,3 +38,51 @@
           &:before,
           &:after
             transform translate(1.8rem, -1.8rem)
+
+
+@media(max-width 1500px)
+  .services
+    .service
+      &__name
+        font-size 2.4rem
+
+
+@media(max-width 1200px)
+  .services
+    .service
+      &__name
+        font-size 2rem
+      &__icon
+        &:before,
+        &:after
+          transform scale(.7)
+      &__price
+        font-size 1.4rem
+
+
+@media(max-width 1000px)
+  .services
+    .service
+      &__name
+        font-size 1.8rem
+
+
+@media(max-width 767px)
+  .services
+    .service
+      display block
+      padding 1.6rem 0
+      &__name
+        margin-bottom .5em
+      &__icon
+        display none
+      &__price
+        font-size 1.2rem
+
+
+
+
+
+
+
+

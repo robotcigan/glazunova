@@ -1,0 +1,54 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.wow
+              h1.inner-header__title Блог
+
+
+        .tabs
+          .tabs__header
+            a(href="").tabs__link.tabs__link_active Всё
+            a(href="").tabs__link Психотерапия
+            a(href="").tabs__link Обучение
+            a(href="").tabs__link Семинар
+            a(href="").tabs__link Лекции
+            a(href="").tabs__link Депресия
+            a(href="").tabs__link Психиатрия
+            a(href="").tabs__link Психология
+
+        .news
+          .new
+            a(href="").new__img
+              +webp('new-1', 'jpg')
+            .new__container
+              .date.new__date 31.03.2020
+              a(href="").new__title Изменение времени работы
+              p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+              a(href="").new__link Психотерапия
+          .new
+            a(href="").new__img
+              +webp('new-2', 'jpg')
+            .new__container
+              .date.new__date 31.03.2020
+              a(href="").new__title Изменение времени работы
+              p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+              a(href="").new__link Психотерапия
+          .new
+            a(href="").new__img
+              +webp('noimage', 'png')
+            .new__container
+              .date.new__date 31.03.2020
+              a(href="").new__title Изменение времени работы
+              p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+              a(href="").new__link Психотерапия
+
+
+        include pagination.pug
+
+
+

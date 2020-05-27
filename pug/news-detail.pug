@@ -1,0 +1,88 @@
+extends layout.pug
+
+block content
+  main.content
+    .wrapper
+      section.section
+        .inner-block
+          .inner-block__left
+            .inner-header.inner-header_bordered.wow
+              .inner-header__label 23.04.2020
+              h1.inner-header__title Изменение времени работы
+              p.inner-header__p На период действия карантина и ограничительных мероприятий клиника работает до 19:00, в воскресенье до 16:00.
+
+            .news-detail.container
+              .col.col--sm-3
+                a(href="").specialist
+                  .specialist__photo
+                    +webp('specialists/1', 'jpg')
+                    .specialist__photo-hover
+                      +webp('specialists/1-hover', 'jpg')
+                  .specialist__container
+                    .specialist__name Шелудько Михаил Васильевич
+                    .specialist__status-container
+                      .specialist__status Психиатр-психотерапевт
+                      .specialist__status Кандидат медицинских наук
+                      .specialist__status Член Российского общества психиатров
+                hr
+                //- Rambler.Likes script start
+                .news-detail__share Подписаться
+                .rambler-share
+                  script.
+                    (function() {
+                      var init = function() {
+                      RamblerShare.init('.rambler-share', {
+                        "style": {
+                          "counterSize": 12,
+                          "buttonBackground": "rgba(255,255,255,0)",
+                          "iconColor": "#000",
+                          "textColor": "#000"
+                        },
+                        "utm": "utm_medium=social",
+                        "counters": true,
+                        "buttons": [
+                          "vkontakte",
+                          "facebook",
+                          "odnoklassniki",
+                          "livejournal",
+                          "twitter"
+                        ]
+                      });
+                      };
+                      var script = document.createElement('script');
+                      script.onload = init;
+                      script.async = true;
+                      script.src = 'https://developers.rambler.ru/likes/v1/widget.js';
+                      document.head.appendChild(script);
+                      })();
+
+                hr
+                .news-detail__views 49 просмотров
+              .col.col--sm-9
+                h3.news-detail__title Рекомендуем вам
+                p Мы настоятельно рекомендуем воспользоваться возможностью дистанционных консультаций, условия которых (skype, телефон, видео по WhatsApp) Вы можете обсудить с нашими администраторами по телефону +79184514843.
+                p Учитывая рекомендации Правительства Российской Федерации, Министерства здравоохранения и ВОЗ, а так же с целью максимально защитить Вас и наших сотрудников в нашей клинике принимаются меры для защиты и предотвращения распространение вируса COVID-19.
+                p Наши сотрудники не выходят на работу, если у них есть признаки простуды
+                p В помещениях проводится регулярное проветривание
+                p Каждый час проводится санитарная обработка ручек и всех поверхностей, которые касаются люди.
+                p Если Вы вернулись из стран, где зарегистрированы случаи COVID-19, или контактировали с заболевшими коронавирусной инфекцией, в течение 14 дней оставайтесь дома на карантине.
+                p Если у Вас есть признаки простуды, оставайтесь дома и вызовите врача.
+                p Напоминаем, что в нашей клинике есть возможность 
+                  a(href="") получить консультацию дистанционно
+                  | , не выходя из дома.
+
+          .inner-block__right
+            a(href="").sticky-btn
+              .sticky-btn__text-container
+                .sticky-btn__text Скопировать ссылку
+              .sticky-btn__icon
+                img(src="./img/news-link.svg", alt="")
+
+
+    include form-block.pug
+
+
+
+
+
+

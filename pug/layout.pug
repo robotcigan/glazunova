@@ -105,27 +105,45 @@ html(lang="ru")
                   .wrapper.dropdown__container
                     .dropdown__left
                       .dropdown__nav
-                        .dropdown__nav-link.dropdown__nav-link Психиатры и психотерапевты
-                        .dropdown__nav-link Неврологи и терапевты
-                        .dropdown__nav-link Психологи
-                        .dropdown__nav-link Другие специалисты
-                        .dropdown__nav-link Все специалисты
+                        .dropdown__nav-link.dropdown__nav-link_active: a(href="") Психиатры и психотерапевты
+                        .dropdown__nav-link: a(href="") Неврологи и терапевты
+                        .dropdown__nav-link: a(href="") Психологи
+                        .dropdown__nav-link: a(href="") Другие специалисты
+                        .dropdown__nav-link: a(href="") Все специалисты
                     .dropdown__right
-                      .container
-                        - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
-                        - for (var i = 1; i < 12; i++)
-                          .col.col--sm-3
-                            a(href="").specialist
-                              .specialist__photo
-                                +webp('specialists/' + i, 'jpg')
-                                .specialist__photo-hover
-                                  +webp('specialists/' + i + '-hover', 'jpg')
-                              .specialist__container
-                                .specialist__name= specialists[i - 1]
-                                .specialist__status-container
-                                  .specialist__status Психиатр-психотерапевт
-                                  .specialist__status Кандидат медицинских наук
-                                  .specialist__status Член Российского общества психиатров
+                      .dropdown__specialists.dropdown__specialists_active
+                        .container
+                          - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
+                          - for (var i = 1; i < 12; i++)
+                            .col.col--sm-3
+                              a(href="").specialist
+                                .specialist__photo
+                                  +webp('specialists/' + i, 'jpg')
+                                  .specialist__photo-hover
+                                    +webp('specialists/' + i + '-hover', 'jpg')
+                                .specialist__container
+                                  .specialist__name= specialists[i - 1]
+                                  .specialist__status-container
+                                    .specialist__status Психиатр-психотерапевт
+                                    .specialist__status Кандидат медицинских наук
+                                    .specialist__status Член Российского общества
+
+                      .dropdown__specialists
+                        .container
+                          - var specialists = ['Шелудько Михаил Васильевич', 'Демьянов Иван Александрович', 'Александрова Людмила Александровна', 'Брижак (Наджарьян) Сусанна Сергеевна', 'Иванов Иван Иванович', 'Данилова Екатерина Владимировна']
+                          - for (var i = 1; i < 5; i++)
+                            .col.col--sm-3
+                              a(href="").specialist
+                                .specialist__photo
+                                  +webp('specialists/' + i, 'jpg')
+                                  .specialist__photo-hover
+                                    +webp('specialists/' + i + '-hover', 'jpg')
+                                .specialist__container
+                                  .specialist__name= specialists[i - 1]
+                                  .specialist__status-container
+                                    .specialist__status Психиатр-психотерапевт
+                                    .specialist__status Кандидат медицинских наук
+                                    .specialist__status Член Российского общества психиатров
 
 
               .nav__link: a(href="./services.html") Услуги

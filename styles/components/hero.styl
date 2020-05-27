@@ -1,4 +1,9 @@
 .hero
+  &__our-specialists
+    color $gray
+    font-size 1.4rem
+    margin-bottom 1em
+    text-align center
   &__wrapper
     overflow hidden
     &:hover
@@ -27,11 +32,13 @@
 
 @media(max-width 1200px)
   .hero
+    &__our-specialists
+      font-size 1.2rem
     .specialist
       margin-right 1.2rem
       &__photo
         margin-bottom 1.6rem
-        min-width 28rem
+        min-width 24rem
       &__name
         font-size 1.4rem
       &__status

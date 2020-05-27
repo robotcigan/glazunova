@@ -36,6 +36,17 @@ $(document).ready(function() {
     });
   }
 
+  
+  // Dropdowns
+  $('.dropdown__nav-link').on('mouseenter', function() {
+    let index = $(this).index();
+    $('.dropdown__nav-link').removeClass('dropdown__nav-link_active');
+    $(this).addClass('dropdown__nav-link_active');
+    $('.dropdown__specialists').removeClass('dropdown__specialists_active');
+    $('.dropdown__specialists').eq(index).addClass('dropdown__specialists_active');
+  })
+
+
   // hero
   let heroContainer = $('.hero__container').clone();
   $('.hero__parallax').append(heroContainer);
