@@ -1,5 +1,8 @@
 extends layout.pug
 
+block condition
+  - var formClass = 'form_sign-page';
+
 block content
   main.content
     .wrapper
@@ -10,15 +13,16 @@ block content
             p.inner-header__p Если вы в первый раз записываетесь на приём и у вас есть вопросы, то вы можете проконсультироваться с нашим администратором по телефону +7 (918) 451-48-43 или +7 (861) 255-18-45. Или 
               a(href="") написав нам в WhatsApp
 
+          include form-block.pug
+        
         .inner-block__right
           a(href="").sticky-btn
             .sticky-btn__text-container
               .sticky-btn__text Оплатить онлайн
             .sticky-btn__icon
-              img(src="./img/sticky-whatsapp.svg", alt="")
+              img(src="./img/sticky-payment.svg", alt="")
 
 
-      include form-block.pug
 
 
 

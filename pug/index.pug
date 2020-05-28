@@ -45,14 +45,18 @@ block content
 
   section.blockquote-section.section
     .wrapper
-      .blockquote
-        .blockquote__title «Из любой ситуации есть выход! Мы лишь поможем вам найти его. Доверьтесь профессионалам с большим стажем»
-        .blockquote__person
-          .blockquote__name Глазунова Татьяна Ивановна
-          .blockquote__status-container
-            .blockquote__status Главный врач Клиники
-            .blockquote__status Психиатр-психотерапевт
-            .blockquote__status Член Российского общества психиатров
+      .blockquote-container
+        .blockquote
+          .blockquote__title «Из любой ситуации есть выход! Мы лишь поможем вам найти его. Доверьтесь профессионалам с большим стажем»
+          .specialist
+            .specialist__photo
+              +webp('blockquote-index', 'jpg')
+            .specialist__container
+              .specialist__name Глазунова Татьяна Ивановна
+              .specialist__status-container
+                .specialist__status Психиатр-психотерапевт
+                .specialist__status Кандидат медицинских наук
+                .specialist__status Член Российского общества
 
   section.section
     .wrapper
@@ -73,5 +77,36 @@ block content
               .prem__title Европейские методики
             .prem__bottom
               p.prem__text Если вы хотите чтобы ваше посещение сеансов осталось неизвестным для других, то это не проблема.
+
+  section.section.news
+    .wrapper
+      .index-header
+        h2 Блог
+        .index-header__link: a(href="") Смотреть все
+      .new
+        a(href="").new__img
+          +webp('new-1', 'jpg')
+        .new__container
+          .date.new__date 31.03.2020
+          a(href="").new__title Изменение времени работы
+          p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+          a(href="").new__link Психотерапия
+      .new
+        a(href="").new__img
+          +webp('new-2', 'jpg')
+        .new__container
+          .date.new__date 31.03.2020
+          a(href="").new__title Изменение времени работы
+          p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+          a(href="").new__link Психотерапия
+      .new
+        a(href="").new__img
+          +webp('noimage', 'png')
+        .new__container
+          .date.new__date 31.03.2020
+          a(href="").new__title Изменение времени работы
+          p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+          a(href="").new__link Психотерапия
+
 
   include form-block.pug

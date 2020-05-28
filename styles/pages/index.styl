@@ -32,16 +32,48 @@
 .blockquote-section
   background-color $light-gray
 
+.blockquote-container
+  display flex
+  justify-content center
+
 .blockquote
   align-items center
   display flex
   flex-direction column
+  max-width 68rem
   padding 8rem 0
   &__title
-    font-size 4rem
+    font-size 3.2rem
     font-weight 500
-    line-height 1.2
+    line-height 1.4
+    letter-spacing -1px
+    margin-bottom 1em
     text-align center
+  .specialist
+    display flex
+    &__photo
+      border-radius 50%
+      flex-shrink 0
+      margin-bottom 1.6rem
+      margin-right 1.6rem
+      overflow hidden
+      size(8rem)
+    &__name
+      font-size 1.4rem
+    &__status
+      font-size 1.2rem
+
+.index-header
+  align-items center
+  border-bottom $border
+  display flex
+  justify-content space-between
+  &__link
+    color $primary
+    font-size 1.4rem
+    a
+      linkHover($primary)
+
 
 .prem
   border-radius $radius

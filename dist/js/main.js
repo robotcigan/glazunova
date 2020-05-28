@@ -50,6 +50,10 @@ $(document).ready(function () {
   var heroContainer = $('.hero__container').clone();
   $('.hero__parallax').append(heroContainer);
 
+  // about effect
+  var aboutItems = $('.effect__column').clone();
+  $('.effect__wrapper').append(aboutItems);
+
   // Sticky button
   function stickyBtn() {
     if (!$('.sticky-btn').hasClass('sticky-btn_index') && $(window).scrollTop() > 1) {

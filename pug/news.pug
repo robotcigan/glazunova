@@ -21,31 +21,32 @@ block content
             a(href="").tabs__link Психиатрия
             a(href="").tabs__link Психология
 
-        .news
-          .new
-            a(href="").new__img
-              +webp('new-1', 'jpg')
-            .new__container
-              .date.new__date 31.03.2020
-              a(href="").new__title Изменение времени работы
-              p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
-              a(href="").new__link Психотерапия
-          .new
-            a(href="").new__img
-              +webp('new-2', 'jpg')
-            .new__container
-              .date.new__date 31.03.2020
-              a(href="").new__title Изменение времени работы
-              p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
-              a(href="").new__link Психотерапия
-          .new
-            a(href="").new__img
-              +webp('noimage', 'png')
-            .new__container
-              .date.new__date 31.03.2020
-              a(href="").new__title Изменение времени работы
-              p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
-              a(href="").new__link Психотерапия
+        section.section.news
+          - for (var i = 0; i < 2; i++)
+            .new
+              a(href="").new__img
+                +webp('new-1', 'jpg')
+              .new__container
+                .date.new__date 31.03.2020
+                a(href="").new__title Изменение времени работы
+                p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+                a(href="").new__link Психотерапия
+            .new
+              a(href="").new__img
+                +webp('new-2', 'jpg')
+              .new__container
+                .date.new__date 31.03.2020
+                a(href="").new__title Изменение времени работы
+                p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+                a(href="").new__link Психотерапия
+            .new
+              a(href="").new__img
+                +webp('noimage', 'png')
+              .new__container
+                .date.new__date 31.03.2020
+                a(href="").new__title Изменение времени работы
+                p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
+                a(href="").new__link Психотерапия
 
 
         include pagination.pug

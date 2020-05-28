@@ -31,6 +31,10 @@
     size(100%)
     top 0
     z-index -1
+  // &__img
+  //   align-items flex-end
+  //   display flex
+  //   height 72rem
   &__text
     font-size 2.4rem
     font-weight 500
@@ -86,6 +90,59 @@
     stroke-dashoffset 0
 
 
+
+.effect
+  overflow hidden
+  &__wrapper
+    animation hero 40s infinite linear
+    display flex
+  &__column
+    display flex
+    margin-right 8rem
+  &__img
+    margin-bottom 1.6rem
+    size(20rem)
+  &__item
+    // margin-right 12rem
+    &_square
+      margin-left -4rem
+      margin-top 32rem
+      .effect
+        &__img
+          size(24rem)
+    &_small
+      margin-right -20rem
+      margin-top 48rem
+      .effect
+        &__img
+          size(20rem, 26rem)
+    &_vertical
+      margin-left -9.6rem
+      margin-top 20rem
+      .effect
+        &__img
+          size(60rem, 48rem)
+    &_horizontal
+      .effect
+        &__img
+          size(32rem, 48rem)
+      &-bottom
+        margin-left -8rem
+        margin-top 28rem
+  // &:hover
+  //   .effect
+  //     &__wrapper
+  //       animation-play-state paused
+
+
+
+@keyframes effect
+  0%
+    transform translateX(0)
+  100%
+    transform translateX(-100%)
+
+
 .structure
   background-color #DEE6EB
   border-radius $radius
@@ -103,9 +160,58 @@
 
 
 
+@media(max-width 1440px)
+  .quote
+    &__img
+      img
+        max-width 60rem
+    &__text
+      font-size 2rem
 
 
+@media(max-width 1200px)
+  .quote
+    justify-content flex-end
+    &__text
+      left 3.2rem
+      top 3.2rem
+    &__person
+      bottom 3.2rem
+      left 3.2rem
+    &__next
+      right 3.2rem
+      size(4.8rem)
+      top 3.2rem
+      &:before
+        size(4.8rem)
+      &:after
+        size(5.6rem)
+    &__progress
+      circle
+        stroke rgba($primary, .3)
+    &__img
+      margin-right 2.4rem
+      img
+        max-width 48rem
 
-
-
-
+@media(max-width 1000px)
+  .quote
+    &__text
+      font-size 1.6rem
+      max-width 32rem
+    &__img
+      img
+        max-width 44rem
+    &__name
+      font-size 1.4rem
+      line-height 1.4
+      max-width 24rem
+    &__position
+      font-size 1.2rem
+  .structure
+    height 14rem
+    padding 2rem
+    &__name
+      font-size 1.8rem
+    &__count
+      font-size 1.2rem
