@@ -4,11 +4,14 @@ body
 
 .page
   // background-color #fff
+  left 0
+  position relative
   transition $transition2
   &_blind
     filter grayscale(100%) contrast(1)
   &_mobile-menu-open
-    transform translateX(10rem)
+    left 10rem
+    // transform translateX(10rem)
 
 // .page
 //   min-height calc(100vh)

@@ -40,15 +40,26 @@ $(document).ready(function () {
   });
 
   // Hero scroll
-  var heroTween = new TimelineMax().to('.hero__parallax', 1, {
-    x: -200
+  function ifNotMobile() {
+    if ($(window).width() > 1200) {
+      var heroTween = new TimelineMax().to('.hero__parallax', 1, {
+        x: -200
+      });
+      var heroScroll = new ScrollMagic.Scene({
+        triggerElement: '.page',
+        triggerHook: 0,
+        duration: $(window).height()
+      }).setTween(heroTween)
+      // .addIndicators()
+      .addTo(controller);
+    } else {
+      controller.removeScene(serviceBgScroll);
+    }
+  }
+
+  $(window).on('resize', function () {
+    ifNotMobile();
   });
 
-  var heroScroll = new ScrollMagic.Scene({
-    triggerElement: '.page',
-    triggerHook: 0,
-    duration: $(window).height()
-  }).setTween(heroTween)
-  // .addIndicators()
-  .addTo(controller);
+  ifNotMobile();
 });

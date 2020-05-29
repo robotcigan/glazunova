@@ -1,8 +1,9 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="60" cy="60" r="59" stroke="url(#paint0_angular)" stroke-width="2"/>
-<path d="M57.8 64.696H61.256L61.576 50.808V47H57.48V50.808L57.8 64.696ZM59.496 72.28C60.904 72.28 62.024 71.192 62.024 69.784C62.024 68.376 60.904 67.256 59.496 67.256C58.12 67.256 57 68.376 57 69.784C57 71.192 58.12 72.28 59.496 72.28Z" fill="#FF650E"/>
+<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M62 123C95.6894 123 123 95.6894 123 62C123 28.3106 95.6894 1 62 1C28.3106 1 1 28.3106 1 62C1 95.6894 28.3106 123 62 123Z" stroke="url(#paint0_angular)" stroke-width="2"/>
+<path d="M122 62C122 95.1371 95.1371 122 62 122C28.8629 122 2 95.1371 2 62C2 28.8629 28.8629 2 62 2C95.1371 2 122 28.8629 122 62Z" fill="white"/>
+<path d="M59.8 66.696H63.256L63.576 52.808V49H59.48V52.808L59.8 66.696ZM61.496 74.28C62.904 74.28 64.024 73.192 64.024 71.784C64.024 70.376 62.904 69.256 61.496 69.256C60.12 69.256 59 70.376 59 71.784C59 73.192 60.12 74.28 61.496 74.28Z" fill="#FF650E"/>
 <defs>
-<radialGradient id="paint0_angular" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 60) rotate(-90) scale(60)">
+<radialGradient id="paint0_angular" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(62 62) rotate(-90) scale(60)">
 <stop stop-color="#FF650E" stop-opacity="0"/>
 <stop offset="1" stop-color="#FF650E"/>
 </radialGradient>

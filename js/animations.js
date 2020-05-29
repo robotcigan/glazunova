@@ -43,23 +43,32 @@ $(document).ready(function() {
     $('.page').removeClass('page_blind');
   });
 
+
   // Hero scroll
-  let heroTween = new TimelineMax()
-    .to('.hero__parallax', 1, {
-      x: -200
-    });
+  function ifNotMobile() {
+    if ($(window).width() > 1200) {
+      let heroTween = new TimelineMax()
+        .to('.hero__parallax', 1, {
+          x: -200
+        });
+      let heroScroll = new ScrollMagic.Scene({
+        triggerElement: '.page',
+        triggerHook: 0,
+        duration: $(window).height()
+      })
+      .setTween(heroTween)
+      // .addIndicators()
+      .addTo(controller);
+    } else {
+      controller.removeScene(serviceBgScroll)
+    }
+  }
 
-  let heroScroll = new ScrollMagic.Scene({
-    triggerElement: '.page',
-    triggerHook: 0,
-    duration: $(window).height()
-  })
-  .setTween(heroTween)
-  // .addIndicators()
-  .addTo(controller);
+  $(window).on('resize', function() {
+    ifNotMobile()
+  });
 
-
-
+  ifNotMobile();
 
 
 

@@ -31,14 +31,14 @@ block content
   section.about-section.section
     .wrapper
       .container
-        .col.col--sm-6
+        .col.col--md-6
           .label О клинике
           .about-section__title Более 30 квалифицированных специалистов разберут индивидуально ваш случай и подберут лечение. Мы работаем почти со всеми видами психологических проблем. 
           p.about-section__text Центр профессиональной психотерапии, психоневрологический центр. У нас работают только дипломированные врачи, работающие по европейским клинически подтверждённым методикам.
           .btn
             .btn__text Подробнее о клинике
-        .col.col--sm-1
-        .col.col--sm-5
+        .col.col--md-1
+        .col.col--md-5
           .about-section__img
             +webp('clinic', 'jpg')
   
@@ -58,10 +58,10 @@ block content
                 .specialist__status Кандидат медицинских наук
                 .specialist__status Член Российского общества
 
-  section.section
+  section.section.prems
     .wrapper
       .container
-        .col.col--sm-6
+        .col.col--lg-6
           .prem.prem_static
             .prem__img
               +webp('prem', 'jpg')
@@ -69,7 +69,7 @@ block content
               .prem__title Профессиональная терапия
             .prem__bottom
               p.prem__text Если вы хотите чтобы ваше посещение сеансов осталось неизвестным для других, то это не проблема.
-        .col.col--sm-6
+        .col.col--lg-6
           .prem.prem_animate
             .prem__top
               .prem__title Конфиденциальность
@@ -100,8 +100,9 @@ block content
           p.new__anons Детям и подросткам сложно выражать свои мысли и эмоции. На вопрос близких «что с тобой?»
           a(href="").new__link Психотерапия
       .new
-        a(href="").new__img
-          +webp('noimage', 'png')
+        a(href="").new__img.new__img_noimage
+          //- +webp('noimage', 'png')
+          img(src="./img/noimage.png", alt="")
         .new__container
           .date.new__date 31.03.2020
           a(href="").new__title Изменение времени работы
