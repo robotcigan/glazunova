@@ -47,20 +47,37 @@ $(document).ready(function() {
   // Hero scroll
   function ifNotMobile() {
     if ($(window).width() > 1200) {
-      let heroTween = new TimelineMax()
-        .to('.hero__parallax', 1, {
-          x: -200
-        });
-      let heroScroll = new ScrollMagic.Scene({
+      // let heroTween = new TimelineMax()
+      //   .to('.hero__parallax', 1, {
+      //     x: -200
+      //   });
+      // let heroScroll = new ScrollMagic.Scene({
+      //   triggerElement: '.page',
+      //   triggerHook: 0,
+      //   duration: $(window).height()
+      // })
+      // .setTween(heroTween)
+      // // .addIndicators()
+      // .addTo(controller);
+
+      let specPageImgTween = new TimelineMax()
+        .fromTo('.spec-page__right img', 1, {
+          scale: 1.1
+        }, {
+          scale: 1
+        })
+      let specPageImgScroll = new ScrollMagic.Scene({
         triggerElement: '.page',
         triggerHook: 0,
-        duration: $(window).height()
+        duration: '50%'
       })
-      .setTween(heroTween)
+      .setTween(specPageImgTween)
       // .addIndicators()
       .addTo(controller);
+
     } else {
-      controller.removeScene(serviceBgScroll)
+      controller.removeScene(serviceBgScroll);
+      controller.removeScene(serviceBgScroll);
     }
   }
 

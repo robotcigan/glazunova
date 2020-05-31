@@ -70,14 +70,27 @@ $(document).ready(function () {
 
   // Slider/carousel
   var swiper = new Swiper('.slider .swiper-container', {
+    slidesPerView: 1,
     loop: true,
+    spaceBetween: 32,
     navigation: {
-      nextEl: '.slider__control_right',
-      prevEl: '.slider__control_left'
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
     },
     pagination: {
       el: '.swiper-pagination',
       clickable: true
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1200: {
+        slidesPerView: 3
+      },
+      1440: {
+        slidesPerView: 4
+      }
     }
   });
 

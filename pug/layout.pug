@@ -79,6 +79,21 @@ html(lang="ru")
     main.page
       header.header
         .header__progress
+        //- .blind
+          .wrapper
+            .blind__container
+              .blind__noimages
+                .blind__noimages-btn Отключить изображения
+              .blind__fonts
+                .blind__font-btn.blind__font-btn_normal A
+                .blind__font-btn.blind__font-btn_bigger A
+                .blind__font-btn.blind__font-btn_biggest A
+              .blind__colors
+                .blind__colors-btn.blind__colors-btn_black-white Чёрный на белом
+                .blind__colors-btn.blind__colors-btn_white-black Белый на чёрном
+                .blind__colors-btn.blind__colors-btn_blue Тёмно синий на голубом
+                .blind__colors-btn.blind__colors-btn_brown Коричневый на бежевом
+
         .header__container.wrapper
           .header__left
             a(href="./pages.html").logo
@@ -244,3 +259,4 @@ html(lang="ru")
     script(src="./js/jquery.nice-select.min.js")
     script(src="./js/main.js")
     script(src="./js/animations.js")
+    //- script(src="./js/blind.js")

@@ -1,14 +1,10 @@
 .wrapper
-  // max-width (1700 / 1920 * 100)%
   margin 0 auto
-  // width 1420px
   padding-left 2.4rem
   padding-right 2.4rem
   width 100%
-  // width 94%
 
 .container
-  // color #fff
   display grid
   grid minmax(100px, auto)
   grid-template-columns repeat(12, 1fr)
@@ -21,13 +17,6 @@
   &:before
     display none
 
-// .col
-  // background-color rgba(#fff, .2)
-  // grid-column-end auto
-  // padding 4rem
-  // text-align center
-  // width 100%
-
 .col
   grid-column span 12
 
@@ -39,30 +28,9 @@
     grid-column span 12
 
 .col--xs
-  &-1
-    grid-column span 1
-  &-2
-    grid-column span 2
-  &-3
-    grid-column span 3
-  &-4
-    grid-column span 4
-  &-5
-    grid-column span 5
-  &-6
-    grid-column span 6
-  &-7
-    grid-column span 7
-  &-8
-    grid-column span 8
-  &-9
-    grid-column span 9
-  &-10
-    grid-column span 10
-  &-11
-    grid-column span 11
-  &-12
-    grid-column span 12
+  for $xs in 1..12
+    &-{$xs}
+      grid-column span $xs
 
 
 @media(min-width 544px)
@@ -70,61 +38,18 @@
     grid-column-gap 1.6rem
     grid-row-gap 1.6rem
   .col--sm
-    &-1
-      grid-column span 1
-    &-2
-      grid-column span 2
-    &-3
-      grid-column span 3
-    &-4
-      grid-column span 4
-    &-5
-      grid-column span 5
-    &-6
-      grid-column span 6
-    &-7
-      grid-column span 7
-    &-8
-      grid-column span 8
-    &-9
-      grid-column span 9
-    &-10
-      grid-column span 10
-    &-11
-      grid-column span 11
-    &-12
-      grid-column span 12
+    for $sm in 1..12
+      &-{$sm}
+        grid-column span $sm
 
 @media(min-width 768px)
   .container
     grid-column-gap 2rem
     grid-row-gap 2rem
   .col--md
-    &-1
-      grid-column span 1
-    &-2
-      grid-column span 2
-    &-3
-      grid-column span 3
-    &-4
-      grid-column span 4
-    &-5
-      grid-column span 5
-    &-6
-      grid-column span 6
-    &-7
-      grid-column span 7
-    &-8
-      grid-column span 8
-    &-9
-      grid-column span 9
-    &-10
-      grid-column span 10
-    &-11
-      grid-column span 11
-    &-12
-      grid-column span 12
-
+    for $md in 1..12
+      &-{$md}
+        grid-column span $md
 
 @media(min-width 992px)
   .wrapper
@@ -133,31 +58,11 @@
   .container
     grid-column-gap 1.2rem
     grid-row-gap 1.2rem
-  .col--lg
-    &-1
-      grid-column span 1
-    &-2
-      grid-column span 2
-    &-3
-      grid-column span 3
-    &-4
-      grid-column span 4
-    &-5
-      grid-column span 5
-    &-6
-      grid-column span 6
-    &-7
-      grid-column span 7
-    &-8
-      grid-column span 8
-    &-9
-      grid-column span 9
-    &-10
-      grid-column span 10
-    &-11
-      grid-column span 11
-    &-12
-      grid-column span 12
+    .col--lg
+      for $lg in 1..12
+        &-{$lg}
+          grid-column span $lg
+
 
 
 @media(min-width 1200px)
@@ -165,30 +70,9 @@
     grid-column-gap 2rem
     grid-row-gap 2rem
   .col--xl
-    &-1
-      grid-column span 1
-    &-2
-      grid-column span 2
-    &-3
-      grid-column span 3
-    &-4
-      grid-column span 4
-    &-5
-      grid-column span 5
-    &-6
-      grid-column span 6
-    &-7
-      grid-column span 7
-    &-8
-      grid-column span 8
-    &-9
-      grid-column span 9
-    &-10
-      grid-column span 10
-    &-11
-      grid-column span 11
-    &-12
-      grid-column span 12
+    for $xl in 1..12
+      &-{$xl}
+        grid-column span $xl
 
 
 @media(min-width 1500px)
@@ -196,33 +80,12 @@
     grid-column-gap 3.2rem
     grid-row-gap 3.2rem
   .col--xxl
-    &-1
-      grid-column span 1
-    &-2
-      grid-column span 2
-    &-3
-      grid-column span 3
-    &-4
-      grid-column span 4
-    &-5
-      grid-column span 5
-    &-6
-      grid-column span 6
-    &-7
-      grid-column span 7
-    &-8
-      grid-column span 8
-    &-9
-      grid-column span 9
-    &-10
-      grid-column span 10
-    &-11
-      grid-column span 11
-    &-12
-      grid-column span 12
+    for $xxl in 1..12
+      &-{$xxl}
+        grid-column span $xxl
 
 
-@media(min-width 1840px)
+@media(min-width 1600px)
   .wrapper
     padding 0
     width 1504px
@@ -247,14 +110,3 @@
 @media(max-width 544px)
  .dn-sm
     display none
-
-
-
-
-// @media(max-width 1600px)
-//   .container
-//     grid-column-gap 2.4rem
-
-// @media(max-width 1200px)
-//   .col
-//     grid-column span 12

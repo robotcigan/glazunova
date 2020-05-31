@@ -1,0 +1,63 @@
+.blind
+  &__container
+    align-items center
+    display flex
+    padding .5em 0
+  &__noimages
+    margin-right 2em
+    &-btn
+      cursor pointer
+      &_active
+        border 2px solid
+  &__fonts
+    align-items baseline
+    display flex
+    margin-right 2.4rem
+  &__font-btn
+    cursor pointer
+    &_bigger
+      font-size 1.5em
+    &_biggest
+      font-size 2em
+    &:not(:last-child)
+      margin-right 1rem
+    &_active
+      border 2px solid
+  &__colors
+    display flex
+    &-btn
+      &:not(:last-child)
+        margin-right 1em
+      &_active
+        border 2px solid
+  
+
+
+.page
+  &_blindmode
+    filter grayscale(100%) contrast(1)
+    img
+      display none
+    .logo
+      img
+        display block
+    *
+      color #000 !important
+    p, h1, h2, h3, h4, span, ul, ol
+      opacity 1
+  &_black-white
+    background-color #fff
+    *
+      color #000
+  &_white-black
+    background-color #000
+    *
+      color #fff
+  &_blue
+    background-color #9dd1ff
+    *
+      color #063462 !important
+  &_brown
+    background-color #f7f3d6
+    *
+      color #54371f !important
