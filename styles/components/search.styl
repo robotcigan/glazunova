@@ -54,10 +54,13 @@
     width 100%
     -webkit-appearance none
   &__button
+    align-items center
     border none
     background-color transparent
+    border-radius 50%
     cursor pointer
-    display block
+    display flex
+    justify-content center
     margin 0
     padding 0
     position absolute
@@ -98,7 +101,7 @@
     transform translate(2.4rem, 1rem)
     &:before,
     &:after
-      background-color $gray
+      background-color $main
       content ''
       height 1px
       left 1.6rem
@@ -108,16 +111,14 @@
       width 1.6rem
     &:before
       transform rotate(45deg) translateY(6px)
-      // width 1.6rem
     &:after
       top 2.4rem
       transform rotate(-45deg) translateY(-6px)
-      // width 1.6rem
-
+    &:hover
+      opacity .5
   &_active
     opacity 1
     pointer-events initial
-    // visibility visible
     &:before
       opacity 1
     &:after

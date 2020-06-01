@@ -338,18 +338,33 @@
   .quote-slider
     margin-left -2.4rem
     margin-right -2.4rem
-    // overflow-y initial
   .quote
+    // display block
+    flex-direction column
     &__img
+      order -1
+      margin-right 0
+      margin-top 4.8rem
       img
         max-width 100%
-        // transform translateX(20%)
     &__text
-      margin-left 2.4rem
-      margin-top 2.4rem
+      background-color #e8e7e5 - 5%
+      padding-left 2.4rem
+      // margin-top 2.4rem
+      max-width initial
       position initial
-      // bottom -100%
-      // top initial
+      padding-bottom 2rem
+      padding-right 2.4rem
+      padding-top 2rem
+    &__person
+      // background-color #fff
+      // padding-left 2.4rem
+      // padding-top 1.6rem
+      // position initial
+      left 2.4rem
+      top 2.4rem
+    &__position
+      display none
   .effect
     &__wrapper
       animation hero 10s infinite linear

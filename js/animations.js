@@ -60,24 +60,25 @@ $(document).ready(function() {
       // // .addIndicators()
       // .addTo(controller);
 
-      let specPageImgTween = new TimelineMax()
+      var specPageImgTween = new TimelineMax()
         .fromTo('.spec-page__right img', 1, {
-          scale: 1.1
+          scale: 1.05
         }, {
           scale: 1
         })
-      let specPageImgScroll = new ScrollMagic.Scene({
+      var specPageImgScroll = new ScrollMagic.Scene({
         triggerElement: '.page',
         triggerHook: 0,
-        duration: '50%'
+        duration: '100%'
       })
       .setTween(specPageImgTween)
       // .addIndicators()
+      // .setPin('.spec-page__right')
       .addTo(controller);
 
     } else {
-      controller.removeScene(serviceBgScroll);
-      controller.removeScene(serviceBgScroll);
+      controller.removeScene(specPageImgScroll);
+      // controller.removeScene(serviceBgScroll);
     }
   }
 
