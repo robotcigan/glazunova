@@ -8,8 +8,23 @@ block content
           .inner-block__left
             .inner-header.wow
               h1.inner-header__title О клинике
-              p.inner-header__p Специалисты нашей клиники используют как медикаментозные, так и немедикаментозные методы лечения, в том числе различные методы психотерапевтического и физиотерапевтического  лечения. Все программы основаны на современных достижениях медицинской науки.  У нас работают кандидаты медицинских наук, врачи высшей категории, имеющие большой и успешный практический опыт.
-              p.inner-header__sub Работаем с 2014 года
+              //- p.inner-header__p Специалисты нашей клиники используют как медикаментозные, так и немедикаментозные методы лечения, в том числе различные методы психотерапевтического и физиотерапевтического  лечения. Все программы основаны на современных достижениях медицинской науки.  У нас работают кандидаты медицинских наук, врачи высшей категории, имеющие большой и успешный практический опыт.
+              //- p.inner-header__sub Работаем с 2014 года
+              //- strong У нас вы можете получить консультацию:
+              //- ul
+              //-   li психиатра
+              //-   li психотерапевта
+              //-   li психолога
+              //-   li консультанта по детскому сну
+              //-   li невролога и эпилептолога
+              //-   li мануального терапевта и остеопата
+              //-   li врача функциональной диагностики
+
+        .about-top
+          .container.about-top__container
+            .col.col--sm-6
+              p Специалисты нашей клиники используют как медикаментозные, так и немедикаментозные методы лечения, в том числе различные методы психотерапевтического и физиотерапевтического  лечения. Все программы основаны на современных достижениях медицинской науки.  У нас работают кандидаты медицинских наук, врачи высшей категории, имеющие большой и успешный практический опыт.
+              p Работаем с 2014 года
               strong У нас вы можете получить консультацию:
               ul
                 li психиатра
@@ -19,10 +34,12 @@ block content
                 li невролога и эпилептолога
                 li мануального терапевта и остеопата
                 li врача функциональной диагностики
+            .col.col--sm-1
+            .col.col--sm-5
+              .about-top__img
+                +webp('about-page-img', 'jpg')
+              .about-top__slogan Выбирая нас — вы выбираете профессионалов
 
-          .inner-block__right
-            .some
-      
       section.quote-slider.section
         .quote-slider__container
           .quote.quote_active
@@ -38,31 +55,31 @@ block content
                 circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
               img(src="./img/quote-arrow.svg", alt="")
           
-          .quote
-            .quote__bg
-            .quote__text Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания.
-            .quote__img
-              img(src="./img/quote-2.png", alt="")
-            .quote__person
-              .quote__name Данилова Екатерина Владимировна
-              .quote__position Невролог-эпилептолог <br> Врач высшей категории 
-            .quote__next
-              svg(height="74" width="74").quote__progress
-                circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
-              img(src="./img/quote-arrow.svg", alt="")
+          //- .quote
+          //-   .quote__bg
+          //-   .quote__text Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания.
+          //-   .quote__img
+          //-     img(src="./img/quote-2.png", alt="")
+          //-   .quote__person
+          //-     .quote__name Данилова Екатерина Владимировна
+          //-     .quote__position Невролог-эпилептолог <br> Врач высшей категории 
+          //-   .quote__next
+          //-     svg(height="74" width="74").quote__progress
+          //-       circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
+          //-     img(src="./img/quote-arrow.svg", alt="")
 
-          .quote
-            .quote__bg
-            .quote__text Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания.
-            .quote__img
-              img(src="./img/quote-3.png", alt="")
-            .quote__person
-              .quote__name Данилова Екатерина Владимировна
-              .quote__position Невролог-эпилептолог <br> Врач высшей категории 
-            .quote__next
-              svg(height="74" width="74").quote__progress
-                circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
-              img(src="./img/quote-arrow.svg", alt="")
+          //- .quote
+          //-   .quote__bg
+          //-   .quote__text Детские психологи помогут вашему ребенку справится со страхами, трудностями в общении и обучении, чрезмерной агрессией, расстройствами питания.
+          //-   .quote__img
+          //-     img(src="./img/quote-3.png", alt="")
+          //-   .quote__person
+          //-     .quote__name Данилова Екатерина Владимировна
+          //-     .quote__position Невролог-эпилептолог <br> Врач высшей категории 
+          //-   .quote__next
+          //-     svg(height="74" width="74").quote__progress
+          //-       circle(cx="37" cy="37" r="36" stroke="white" stroke-width="2")
+          //-     img(src="./img/quote-arrow.svg", alt="")
 
 
       section.section
@@ -83,42 +100,42 @@ block content
           .effect__item.effect__item_small
             .effect__img
               +webp('about/7', 'jpg')
-            .iffect__text some
+            .effect__text Холлы клиники
           .effect__item.effect__item_horizontal
             .effect__img
               +webp('about/4', 'jpg')
-            .iffect__text some
+            .effect__text Кабинет групповой терапии
           .effect__item.effect__item_vertical
             .effect__img
               +webp('about/1', 'jpg')
-            .iffect__text some
+            .effect__text Демьянов Иван Александрович и его семья
         .effect__column
           .effect__item
             .effect__img
               +webp('about/2', 'jpg')
-            .iffect__text some
+            .effect__text Взрослая терапия
           .effect__item.effect__item_square
             .effect__img
               +webp('about/3', 'jpg')
-            .iffect__text some
+            .effect__text Детский кабинет
         .effect__column
           .effect__item
             .effect__img
               +webp('about/5', 'jpg')
-            .iffect__text some
+            .effect__text some
           .effect__item.effect__item_horizontal.effect__item_horizontal-bottom
             .effect__img
               +webp('about/4', 'jpg')
-            .iffect__text some
+            .effect__text Александрова Людмила Александровна, Носенко Олеся Владимировна и Данилова Екатерина Владимировна
         .effect__column
           .effect__item
             .effect__img
               +webp('about/2', 'jpg')
-            .iffect__text some
+            .effect__text some
           .effect__item.effect__item_square
             .effect__img
               +webp('about/3', 'jpg')
-            .iffect__text some
+            .effect__text some
 
 
     section.section
@@ -131,6 +148,49 @@ block content
               .structure
                 .structure__name Взрослое
                 .structure__count 8 специалистов
+
+
+
+
+    section.about-photos
+      .wrapper
+        .container.about-photos__texts
+          .col.col--xl-1.dn-xl
+          .col.col--xl-6.col--sm-7
+            h3.about-photos__title Центр профессиональной психотерапии, психоневрологический центр.
+            p.about-photos__text Специалисты нашей клиники используют как медикаментозные, так и немедикаментозные методы лечения, в том числе различные методы психотерапевтического и физиотерапевтического  лечения. Все программы основаны на современных достижениях медицинской науки.  У нас работают кандидаты медицинских наук, врачи высшей категории, имеющие большой и успешный практический опыт.
+          .col.col--xl-1.col--sm-1
+          .col.col--xl-3.col--sm-4
+            .about-photos__blockquote
+              .about-photos__blockquote-text «Из любой ситуации есть выход! Мы лишь поможем вам найти его. Доверьтесь профессионалам с большим стажем»
+              a(href="").specialist
+                .specialist__photo
+                  +webp('specialists/1', 'jpg')
+                  .specialist__photo-hover
+                    +webp('specialists/1-hover', 'jpg')
+                .specialist__container
+                  .specialist__name Шелудько Михаил Васильевич
+                  .specialist__status-container
+                    .specialist__status Психиатр-психотерапевт
+                    .specialist__status Кандидат медицинских наук
+                    .specialist__status Член Российского общества психиатров
+
+        .container
+          .col.col--sm-6
+            .about-photos__item
+              +webp('about-photos-1', 'jpg')
+          .col.col--sm-6
+            .about-photos__item
+              +webp('about-photos-2', 'jpg')
+            .about-photos__item
+              +webp('about-photos-3', 'jpg')
+
+
+
+
+
+
+
 
 
 

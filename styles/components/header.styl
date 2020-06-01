@@ -72,12 +72,24 @@
       margin-right -.8rem
     &:hover
       background-color rgba($primary, .05)
-  // &_mobile-menu-open
-  //   .logo
-  //     display none
-  //   .header
-  //     &__btn
-  //       display none
+  &__notice
+    background-color $light-gray
+    font-size 1.4rem
+    display none
+    &-container
+      align-items center
+      display flex
+      justify-content space-between
+      height 4.8rem
+    &-close
+      cursor pointer
+      transform scale(.75)
+    a
+      color $primary
+      linkHover($primary)
+    &_active
+      display block
+
 
 .blind-btn
   display flex
@@ -92,7 +104,7 @@
   display flex
   &__link
     // position relative
-    padding 1.2rem 0
+    // padding 1.2rem 0
     transition $transition
     // width 100%
     &:not(:last-child)
@@ -101,12 +113,14 @@
       color $main
       display flex
       font-size 1.4rem
-      padding 2.4rem 0
+      // padding 2.4rem 0
+      padding 3.2rem 0
       // position relative
       linkHover($primary)
       &:before
         background-color $primary
-        bottom -11px
+        // bottom -11px
+        bottom -1px
         z-index 20
       &:after
         // background-color teal

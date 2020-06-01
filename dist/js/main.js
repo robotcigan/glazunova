@@ -178,11 +178,17 @@ $(document).ready(function () {
   //   cursor.removeClass('cursor_swiper cursor_swiper-right');
   // });
 
+  // Уведомление
+  $('.header__notice-close').on('click', function () {
+    $('.header__notice').removeClass('header__notice_active');
+  });
+
   // Поиск
   $('.header__search').on('click', function () {
     $('.search').addClass('search_active');
     $('.search__input').focus();
   });
+
   $('.search__close').on('click', function () {
     $('.search').removeClass('search_active');
   });
