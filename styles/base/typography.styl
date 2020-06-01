@@ -127,9 +127,11 @@ ul
   // padding-left 1em
   padding-left 0
   li
+    display inline-block
     font-size 1.8rem
     line-height 1.6
     margin-bottom .75em
+    // margin-bottom 0
     margin-left 0
     position relative
     vertical-align top
@@ -137,11 +139,15 @@ ul
       background-color $gray
       border-radius 50%
       content ''
+      display block
       left -.8em
-      position absolute
+      // position absolute
+      position relative
       size(4px)
-      top .8em
+      top .9em
+      // top 0
       transition width 1s cubic-bezier(.4,0,0,1) .4s
+      vertical-align middle
 
 blockquote
   font-size 2.4rem

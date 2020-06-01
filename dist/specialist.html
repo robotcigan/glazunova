@@ -44,6 +44,39 @@
     <main class="page">
       <header class="header">
         <div class="header__progress"></div>
+        <div class="blind">
+          <div class="wrapper">
+            <div class="blind__container">
+              <div class="blind__noimages">
+                <div class="blind__noimages-btn-icon"><img src="./img/blind-noimages.svg" alt=""></div>
+                <div class="blind__noimages-btn-text">Отключить изображения</div>
+              </div>
+              <div class="blind__fonts">
+                <div class="blind__font-btn blind__font-btn_normal">A</div>
+                <div class="blind__font-btn blind__font-btn_bigger">A</div>
+                <div class="blind__font-btn blind__font-btn_biggest">A</div>
+              </div>
+              <div class="blind__colors">
+                <div class="blind__colors-btn blind__colors-btn_black-white">
+                  <div class="blind__colors-btn-icon"><img src="./img/blind-black-white.svg" alt=""></div>
+                  <div class="blind__colors-btn-text">Чёрный на белом</div>
+                </div>
+                <div class="blind__colors-btn blind__colors-btn_white-black">
+                  <div class="blind__colors-btn-icon"><img src="./img/blind-white-black.svg" alt=""></div>
+                  <div class="blind__colors-btn-text">Белый на чёрном</div>
+                </div>
+                <div class="blind__colors-btn blind__colors-btn_blue">
+                  <div class="blind__colors-btn-icon"><img src="./img/blind-blue.svg" alt=""></div>
+                  <div class="blind__colors-btn-text">Синий на голубом</div>
+                </div>
+                <div class="blind__colors-btn blind__colors-btn_brown">
+                  <div class="blind__colors-btn-icon"><img src="./img/blind-brown.svg" alt=""></div>
+                  <div class="blind__colors-btn-text">Коричневый на бежевом</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="header__container wrapper">
           <div class="header__left"><a class="logo" href="./pages.html"><img src="./img/logo.svg" alt=""></a>
             <div class="nav">
@@ -382,8 +415,10 @@
             </div>
           </div>
           <div class="header__right">
-            <div class="header__search"><img src="./img/search.svg" alt=""></div><a class="blind-btn" href=""><img src="./img/eye.svg" alt="">
-              <div class="blind-btn__link">Для слабовидящих</div></a><a class="header__phone" href="tel:79882459001">+7 988 245-90-01</a><a class="header__btn header__btn_payment" href="./online-payment.html">Оплатить <span> онлайн</span></a><a class="header__btn header__btn_sign" href="./sign.html">Записаться</a>
+            <div class="header__search"><img src="./img/search.svg" alt=""></div>
+            <div class="blind-btn"><img src="./img/eye.svg" alt="">
+              <div class="blind-btn__link">Для слабовидящих</div>
+            </div><a class="header__phone" href="tel:79882459001">+7 988 245-90-01</a><a class="header__btn header__btn_payment" href="./online-payment.html">Оплатить <span> онлайн</span></a><a class="header__btn header__btn_sign" href="./sign.html">Записаться</a>
             <div class="burger"></div>
           </div>
         </div>
@@ -646,5 +681,6 @@
     <script src="./js/jquery.nice-select.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
+    <script src="./js/blind.js"></script>
   </body>
 </html>
