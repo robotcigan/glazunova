@@ -65,8 +65,8 @@
 
 .page
   &_blindmode
-    img
-      filter grayscale(100%) contrast(1)
+    filter grayscale(100%) contrast(1)
+    // img
     // *
     //   color #000 !important
     p, h1, h2, h3, h4, span, ul, ol
@@ -92,10 +92,13 @@
       background-color #000
   &_blue
     background-color #9dd1ff
+    filter none
     *
       color #063462 !important
     .header, .form, .form-message__text, .blockquote-section
       background-color #9dd1ff
+    img
+      filter grayscale(100%) contrast(1)
   &_brown
     background-color #f7f3d6
     *

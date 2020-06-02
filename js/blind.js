@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('.blind-btn').on('click', function() {
     $('.page').toggleClass('page_blindmode');
     $('.blind').toggleClass('blind_active');
-  })
+  });
 
   $('.blind__font-btn').on('click', function() {
 

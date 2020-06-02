@@ -79,4 +79,21 @@ $(document).ready(function () {
   });
 
   ifNotMobile();
+
+  // index page prems animation
+  function premInterval() {
+    var current = $('.prem_animate .prem__title_active');
+    var index = current.index();
+    if (index < 2) {
+      current.next().addClass('prem__title_active');
+      current.removeClass('prem__title_active');
+      $('.prem_animate .prem__progress-bar').css('top', 33 * (index + 1) + '%');
+    } else {
+      $('.prem_animate .prem__title_active').removeClass('prem__title_active');
+      $('.prem_animate .prem__title').eq(0).addClass('prem__title_active');
+      $('.prem_animate .prem__progress-bar').css('top', 0);
+    }
+  }
+
+  setInterval(premInterval, 2000);
 });

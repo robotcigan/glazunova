@@ -98,35 +98,83 @@
       object-position center
       height 100%
       width 100%
+  &__top
+    position relative
   &__title
-    font-size 4rem
+    font-size 3.2rem
     font-weight 600
     letter-spacing -1px
     max-width 40rem
-    margin-bottom .5em
+    margin-bottom .75em
   &__text
     margin-bottom 0
     max-width 40rem
+  &__bottom
+    display flex
+    justify-content space-between
   &_static
     .prem
       &__title
         color #fff
       &__text
         color #fff
+  &__progress
+    background-color #ddd
+    height 6.4rem
+    position relative
+    width 2px
+    // &:after
+      // animation premProgress 3.5s 2s ease forwards infinite
+    &-bar
+      background-color $main
+      content ''
+      height 2rem
+      position absolute
+      top 0
+      transition $transition
+      width 2px
   &_animate
     background-color $light-gray
     .prem
+      &__top
+        padding-top 4.8rem
       &__title
+        color $gray-text
+        font-size 2rem
+        font-weight 500
         max-width initial
-        &:nth-child(2)
-          font-size 2.4rem
-          font-weight 500
-          margin-bottom .75em
-          opacity .4
-        &:nth-child(3)
-          font-size 2rem
-          font-weight 500
-          opacity .3
+        &_active
+          animation premTitle 2s ease forwards
+          color $main
+          font-size 3.2rem
+          font-weight 600
+          position absolute
+          top 0
+
+
+@keyframes premTitle
+  0%
+    opacity 0
+    transform translateY(.5em)
+  25%
+    opacity 1
+    transform translateY(0)
+  75%
+    opacity 1
+    transform translateY(0)
+  100%
+    opacity 0
+    transform translateY(-.5em)
+
+@keyframes premProgress
+  0%
+    top 0
+  33%
+    top 33.33%
+  66%
+    top 66.66%
+  100%
+    top 0
 
 
 @media(max-width 1440px)
@@ -192,14 +240,33 @@
     margin-right -2.4rem
     padding 2.4rem
     &__title
-      font-size 2.8rem
+      font-size 2.6rem
+    &__text
+      font-size 1.2rem
+      max-width 90%
+    &_animate
+      .prem
+        &__title
+          &_active
+            font-size 2.6rem
 
 
 @media(max-width 350px)
-  .prem
+  h1.index-texts
     &__title
-      font-size 2.4rem
-
+      font-size 2.6rem
+  .index-texts
+    &__subtitle
+      font-size 1.2rem
+  .prem
+    height 28rem
+    &__title
+      font-size 2rem
+    &_animate
+      .prem
+        &__title
+          &_active
+            font-size 2rem
 
 
 

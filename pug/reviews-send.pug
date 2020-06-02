@@ -15,7 +15,7 @@ block content
                 a(href="./reviews-send.html").tabs__link.tabs__link_active Оставить отзыв
 
             .container
-              .col.col--sm-6
+              .col.col--xl-6.col--lg-7.col--sm-7
                 .payment-form
                   form
                     .form-control
@@ -30,12 +30,20 @@ block content
                     .form-control
                       label.form-control__label Ваш отзыв
                       textarea
+                    .form-control.form-control_stars
+                      .form-control__label Оценка
+                      select.custom-select
+                        option &#9733;&#9733;&#9733;&#9733;&#9733;
+                        option &#9733;&#9733;&#9733;&#9733;
+                        option &#9733;&#9733;&#9733;
+                        option &#9733;&#9733;
+                        option &#9733;
                     small Нажимая кнопку «Записаться» я соглашаюсь на 
                       a(href="") обработку моих персональных данных
                     .btn
                       .btn__text Отправить
-              .col.col--sm-1
-              .col.col--sm-3
+              .col.col--xl-1.col--lg-1.dn-lg
+              .col.col--xl-3.col--lg-4.col--sm-5
                 .attentions
                   .attention.attention_red.wow.fade-up
                     p Заполните все поля
