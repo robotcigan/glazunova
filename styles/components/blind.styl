@@ -80,16 +80,22 @@
         display block
   &_black-white
     background-color #fff
+    filter none
     *
       color #000 !important
     .header, .form, .form-message__text, .blockquote-section
       background-color #fff
+    img
+      filter grayscale(100%) contrast(1)
   &_white-black
     background-color #000
+    filter none
     *
       color #fff !important
     .header, .form, .form-message__text, .blockquote-section
       background-color #000
+    img
+      filter grayscale(100%) contrast(1)
   &_blue
     background-color #9dd1ff
     filter none
@@ -101,7 +107,10 @@
       filter grayscale(100%) contrast(1)
   &_brown
     background-color #f7f3d6
+    filter none
     *
       color #54371f !important
     .header, .form, .form-message__text, .blockquote-section
       background-color #f7f3d6
+    img
+      filter grayscale(100%) contrast(1)

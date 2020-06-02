@@ -5,6 +5,9 @@ $(document).ready(function () {
   $('.blind-btn').on('click', function () {
     $('.page').toggleClass('page_blindmode');
     $('.blind').toggleClass('blind_active');
+    if ($('.page').hasClass('page_brown') || $('.page').hasClass('page_blue') || $('.page').hasClass('page_black-white') || $('.page').hasClass('page_white-black')) {
+      $('.page').removeClass('page_brown page_blue page_black-white page_white-black');
+    }
   });
 
   $('.blind__font-btn').on('click', function () {

@@ -3247,6 +3247,7 @@ blockquote:before {
 }
 .page_black-white {
   background-color: #fff;
+  filter: none;
 }
 .page_black-white * {
   color: #000 !important;
@@ -3257,8 +3258,12 @@ blockquote:before {
 .page_black-white .blockquote-section {
   background-color: #fff;
 }
+.page_black-white img {
+  filter: grayscale(100%) contrast(1);
+}
 .page_white-black {
   background-color: #000;
+  filter: none;
 }
 .page_white-black * {
   color: #fff !important;
@@ -3268,6 +3273,9 @@ blockquote:before {
 .page_white-black .form-message__text,
 .page_white-black .blockquote-section {
   background-color: #000;
+}
+.page_white-black img {
+  filter: grayscale(100%) contrast(1);
 }
 .page_blue {
   background-color: #9dd1ff;
@@ -3287,6 +3295,7 @@ blockquote:before {
 }
 .page_brown {
   background-color: #f7f3d6;
+  filter: none;
 }
 .page_brown * {
   color: #54371f !important;
@@ -3296,6 +3305,9 @@ blockquote:before {
 .page_brown .form-message__text,
 .page_brown .blockquote-section {
   background-color: #f7f3d6;
+}
+.page_brown img {
+  filter: grayscale(100%) contrast(1);
 }
 body.mobile-menu-open {
   overflow: hidden;
