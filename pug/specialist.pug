@@ -67,7 +67,7 @@ block content
             .swiper-wrapper
               - for (var b = 1; b < 5; b++)
                 .swiper-slide
-                  a(href="./img/diploms/1.jpg").diplom.modal-open
+                  a(href="./img/diploms/1.jpg" data-fancybox).diplom.modal-open
                     .diplom__img
                       +webp('diploms/' + b, 'jpg')
                     p.diplom__title Диплом о профессиональной переподготовке

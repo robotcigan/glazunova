@@ -21,9 +21,12 @@ $(document).ready(function() {
 
 
   // модалки
-  $('.modal-open').fancybox({
+  $('.modal-open, [data-fancybox]').fancybox({
     touch: false
   });
+//   $('[data-fancybox]').fancybox({
+//   protect: true
+// });
 
   // selects
   $('.custom-select').niceSelect();
