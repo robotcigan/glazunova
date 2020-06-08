@@ -38,12 +38,16 @@ $(document).ready(function() {
   }
 
   // Date picker
+  let disabledDates = $('.datepicker').data('flatpickr-disabled');
+
   $('.datepicker').flatpickr({
     dateFormat: 'd.m.Y',
     altInput: true,
     locale: 'ru',
-    minDate: 'today'
+    minDate: 'today',
+    disable: disabledDates.split(',')
   });
+
 
   
   // Dropdowns
