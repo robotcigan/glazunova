@@ -25,9 +25,6 @@ $(document).ready(function () {
   $('.modal-open, [data-fancybox]').fancybox({
     touch: false
   });
-  //   $('[data-fancybox]').fancybox({
-  //   protect: true
-  // });
 
   // selects
   $('.custom-select').niceSelect();
@@ -39,6 +36,14 @@ $(document).ready(function () {
       showMask: true
     });
   }
+
+  // Date picker
+  $('.datepicker').flatpickr({
+    dateFormat: 'd.m.Y',
+    altInput: true,
+    locale: 'ru',
+    minDate: 'today'
+  });
 
   // Dropdowns
   $('.dropdown__nav-link').on('mouseenter', function () {

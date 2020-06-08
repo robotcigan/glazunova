@@ -562,13 +562,17 @@
                     <div class="col col--sm-8">
                       <div class="form-control">
                         <div class="form-control__label">Когда</div>
-                        <input type="text" placeholder="28.03.2020">
+                        <input class="datepicker" type="text" placeholder="28.03.2020">
                       </div>
                     </div>
                     <div class="col col--sm-4">
                       <div class="form-control">
                         <div class="form-control__label">Во сколько</div>
-                        <input type="text" placeholder="17:00">
+                        <select class="custom-select">
+                          <option>10:00</option>
+                          <option>17:00</option>
+                          <option>18:00</option>
+                        </select>
                       </div>
                     </div>
                   </div><small>Нажимая кнопку «Записаться» я соглашаюсь на <a href="">обработку моих персональных данных</a></small>
@@ -647,6 +651,8 @@
     <script src="./js/wow.min.js"></script>
     <script src="./js/jquery.inputmask.bundle.min.js"></script>
     <script src="./js/jquery.nice-select.min.js"></script>
+    <script src="./js/flatpickr.min.js"></script>
+    <script src="./js/flatpickr-ru.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
     <script src="./js/blind.js"></script>
