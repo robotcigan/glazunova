@@ -5140,6 +5140,7 @@ hr,
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  object-postition: top center;
   width: 100%;
 }
 .spec-page__title {
