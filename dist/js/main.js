@@ -40,13 +40,15 @@ $(document).ready(function () {
   // Date picker
   var disabledDates = $('.datepicker').data('flatpickr-disabled');
 
-  $('.datepicker').flatpickr({
-    dateFormat: 'd.m.Y',
-    altInput: true,
-    locale: 'ru',
-    minDate: 'today',
-    disable: disabledDates.split(',')
-  });
+  if ($('.datepicker').length) {
+    $('.datepicker').flatpickr({
+      dateFormat: 'd.m.Y',
+      altInput: true,
+      locale: 'ru',
+      minDate: 'today',
+      disable: disabledDates.split(',')
+    });
+  }
 
   // Dropdowns
   $('.dropdown__nav-link').on('mouseenter', function () {

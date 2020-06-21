@@ -12,6 +12,8 @@
     size(18rem, 24rem)
     &:not(&_noimage)
       img
+        transition $transition
+        transform scale(1.1)
         width 100%
   &__date
     margin-bottom .5em
@@ -28,6 +30,11 @@
     //   bottom 0
   &__link
     linkHover($primary)
+  &:hover
+    .new
+      &__img
+        img
+          transform none
 
 
 

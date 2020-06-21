@@ -185,6 +185,11 @@ img {
 .btn + .slider {
   margin-top: 3.2rem;
 }
+.swal2-styled.swal2-confirm {
+  background-color: #ff650e !important;
+  border-radius: 32px !important;
+  box-shadow: 0 !important;
+}
 .form-control {
   margin-bottom: 2rem;
   position: relative;
@@ -936,6 +941,14 @@ img {
   opacity: 1;
   -ms-transform: none;
   transform: none;
+}
+@keyframes smallFadeUp {
+  0% {
+    transform: translateY(2.4rem);
+  }
+  100% {
+    transform: none;
+  }
 }
 @keyframes bigFadeUp {
   0% {
@@ -2401,6 +2414,12 @@ blockquote:before {
 .form_sign-page .wrapper {
   padding-left: 0;
   padding-right: 0;
+}
+.form__item {
+  animation: smallFadeUp 1s;
+}
+.form__item_hidden {
+  display: none;
 }
 .form-message {
   -ms-flex-align: end;
@@ -5598,6 +5617,9 @@ hr,
   width: 24rem;
 }
 .new__img:not(.new__img_noimage) img {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   width: 100%;
 }
 .new__date {
@@ -5635,6 +5657,10 @@ hr,
 .new__link:hover:before {
   left: 0;
   width: 100%;
+}
+.new:hover .new__img img {
+  -ms-transform: none;
+  transform: none;
 }
 .news-detail__title {
   font-size: 3.2rem;

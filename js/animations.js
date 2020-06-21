@@ -106,7 +106,7 @@ $(document).ready(function() {
   setInterval(premInterval, 2000);
 
 
-
+  // $('form-control').
 
 
 
