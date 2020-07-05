@@ -1,11 +1,49 @@
 extends layout.pug
 
 block content
+  //- main.content
+  //-   section.section
+  //-     .spec-page
+  //-       .spec-page__left
+  //-         .wrapper
+  //-           .spec-page__left-container
+  //-             .labels
+  //-               .label Невролог-эпилептолог
+  //-               .label Врач высшей категории 
+  //-             h1.spec-page__title Данилова Екатерина Владимировна
+  //-             p Психолог, работающий с детьми, страдающими расстройствами аутистического спектра (аутизм). Ведущий специалист Краснодара по немедикаментозному лечению аутизма.
+  //-             .spec-page__subs
+  //-               .spec-page__sub Первый приём — 4 000 руб.
+  //-               .spec-page__sub Последующие — 2 000 руб.
+  //-             .spec-page__btn-container
+  //-               .btn
+  //-                 .btn__text Записаться на приём
+  //-               .spec-page__prepay Для записи на приём необходима предоплата 50%
+  //-             p Психолог, работающий с детьми, страдающими расстройствами аутистического спектра (аутизм). Ведущий специалист Краснодара по немедикаментозному лечению аутизма.
+  //-             .spec-page-xp-and-rating
+  //-               .spec-page-xp
+  //-                 .spec-page-xp__number 27
+  //-                 .spec-page-xp__text лет стаж<br>работы
+  //-               .spec-page-rating
+  //-                 .spec-page-rating__number 7.93
+  //-                 .spec-page-raring__logo
+  //-                   +webp('prodoctorov', 'png')
+  //-             strong Ключевые навыки:
+  //-             ul
+  //-               li Психологическое консультирование
+  //-               li Владение психодиагностическими методами
+  //-               li Семья, детство, а также коррекционная работа с детьми с психическими нарушениями
+  //-             p Специализацию по эпилептологии в клинике Российского Государственного Медицинского Университета. Специалист в области медицины сна, прошла обучение на базе реабилитации Центра управления делами президента. Основное место работы – Неврологический центр СКАЛ 2-ой краевой больницы.
+
+  //-       .spec-page__right
+  //-         .spec-page__img
+  //-           +webp('specialist-big', 'jpg')
+
   main.content
     section.section
-      .spec-page
-        .spec-page__left
-          .wrapper
+      .spec-page.wrapper
+        .spec-page__container.container
+          .col.col--lg-6.spec-page__left
             .spec-page__left-container
               .labels
                 .label Невролог-эпилептолог
@@ -35,9 +73,12 @@ block content
                 li Семья, детство, а также коррекционная работа с детьми с психическими нарушениями
               p Специализацию по эпилептологии в клинике Российского Государственного Медицинского Университета. Специалист в области медицины сна, прошла обучение на базе реабилитации Центра управления делами президента. Основное место работы – Неврологический центр СКАЛ 2-ой краевой больницы.
 
-        .spec-page__right
-          .spec-page__img
-            +webp('specialist-big', 'jpg')
+          .col.col--lg-6.spec-page__right
+            .spec-page__img
+              +webp('specialist-big', 'jpg')
+
+
+
 
     .wrapper
       section.section.education-section

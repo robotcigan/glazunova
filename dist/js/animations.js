@@ -39,41 +39,6 @@ $(document).ready(function () {
     $('.page').removeClass('page_blind');
   });
 
-  // Hero scroll
-  function ifNotMobile() {
-    if ($(window).width() > 1200) {
-      // let heroTween = new TimelineMax()
-      //   .to('.hero__parallax', 1, {
-      //     x: -200
-      //   });
-      // let heroScroll = new ScrollMagic.Scene({
-      //   triggerElement: '.page',
-      //   triggerHook: 0,
-      //   duration: $(window).height()
-      // })
-      // .setTween(heroTween)
-      // // .addIndicators()
-      // .addTo(controller);
-
-      var specPageImgTween = new TimelineMax().fromTo('.spec-page__right img', 1, {
-        scale: 1.05
-      }, {
-        scale: 1
-      });
-      var specPageImgScroll = new ScrollMagic.Scene({
-        triggerElement: '.page',
-        triggerHook: 0,
-        duration: '100%'
-      }).setTween(specPageImgTween)
-      // .addIndicators()
-      // .setPin('.spec-page__right')
-      .addTo(controller);
-    } else {
-      controller.removeScene(specPageImgScroll);
-      // controller.removeScene(serviceBgScroll);
-    }
-  }
-
   $(window).on('resize', function () {
     ifNotMobile();
   });

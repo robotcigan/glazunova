@@ -5111,36 +5111,22 @@ hr,
   justify-content: space-between;
   position: relative;
 }
-.spec-page__left {
-  min-height: 100vh;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 100%;
-}
 .spec-page__left-container {
-  max-width: 61rem;
-}
-.spec-page__right {
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: calc(0rem - var(--header-margin-bottom));
-  width: 50vw;
+  padding-right: 4rem;
 }
 .spec-page__img {
-  height: 100vh;
-  overflow: hidden;
   position: -webkit-sticky;
   position: sticky;
-  right: 0;
-  top: 8rem;
+  top: 13rem;
   width: 100%;
 }
 .spec-page__img img {
   height: 100%;
+  max-width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  object-postition: top center;
+  -o-object-position: top center;
+  object-position: top center;
   width: 100%;
 }
 .spec-page__title {
@@ -5244,6 +5230,10 @@ hr,
   transform: translateY(1rem);
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
 }
+.diplom__img img {
+  max-height: 24rem;
+  max-width: 20rem;
+}
 .diplom__title {
   margin-bottom: 1em;
 }
@@ -5258,7 +5248,7 @@ hr,
 }
 @media (max-width: 1200px) {
   .spec-page__left-container {
-    max-width: 46%;
+    max-width: initial;
   }
   .spec-page__title {
     font-size: 3.2rem;
@@ -5275,6 +5265,9 @@ hr,
   .spec-page__prepay {
     font-size: 1.4rem;
   }
+  .spec-page__img {
+    top: 8.8rem;
+  }
 }
 @media (max-width: 1000px) {
   .spec-page {
@@ -5287,6 +5280,7 @@ hr,
   }
   .spec-page__left-container {
     max-width: initial;
+    padding-right: 0;
   }
   .spec-page__right {
     -ms-flex-order: -1;
@@ -5297,6 +5291,8 @@ hr,
   }
   .spec-page__img {
     height: 50rem;
+    position: initial;
+    top: 0;
   }
   .spec-page__img img {
     -o-object-position: top;
@@ -5318,6 +5314,9 @@ hr,
   }
 }
 @media (max-width: 767px) {
+  .spec-page__right {
+    margin-bottom: 2.4rem;
+  }
   .spec-page__img {
     height: 32rem;
   }
