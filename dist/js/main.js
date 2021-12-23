@@ -2,6 +2,18 @@
 
 $(document).ready(function () {
 
+  if (!localStorage.promoModal || localStorage.promoModal === 'true') {
+    localStorage.setItem('promoModal', true);
+    $('.promo-modal').removeClass('promo-modal_hide');
+  }
+
+  if (localStorage.promoModal === 'false') $('.promo-modal').addClass('promo-modal_hide');
+
+  $('.promo-modal__close, .promo-modal .btn').on('click', function () {
+    $('.promo-modal').addClass('promo-modal_hide');
+    localStorage.promoModal = false;
+  });
+
   // burger
   $('.burger').on('click', function () {
     // $(this).toggleClass('burger_active');
