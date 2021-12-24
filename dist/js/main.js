@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
 
+  // Promo modal
   if (!localStorage.promoModal || localStorage.promoModal === 'true') {
     localStorage.setItem('promoModal', true);
     $('.promo-modal').removeClass('promo-modal_hide');
