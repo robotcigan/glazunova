@@ -13,6 +13,19 @@ $(document).ready(function() {
     localStorage.promoModal = false
   })
 
+  // Cookie
+  if (!localStorage.cookieModal || localStorage.cookieModal === 'true') {
+    localStorage.setItem('cookieModal', true)
+    $('.cookie').removeClass('cookie_hide')
+  }
+
+  if (localStorage.cookieModal === 'false') $('.cookie').addClass('cookie_hide')
+
+  $('.cookie .btn').on('click', function() {
+    $('.cookie').addClass('cookie_hide')
+    localStorage.cookieModal = false
+  })
+
   // burger
   $('.burger').on('click', function() {
     // $(this).toggleClass('burger_active');

@@ -481,6 +481,9 @@ img {
   .btn__text {
     font-size: 1.4rem;
   }
+  .btn--small {
+    padding: 0.75em 1.6em;
+  }
   .form-control {
     margin-bottom: 1.2rem;
   }
@@ -3372,6 +3375,39 @@ blockquote:before {
 }
 .promo-modal_hide {
   display: none;
+}
+.cookie {
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 108px rgba(0,0,0,0.25);
+  border-radius: 2rem;
+  bottom: 0.8rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  left: 0.8rem;
+  overflow: hidden;
+  padding: 0.8rem;
+  position: fixed;
+  right: 0.8rem;
+  width: calc(100% -1.6rem);
+  z-index: 100;
+}
+.cookie__text {
+  margin-bottom: 0;
+}
+.cookie .btn {
+  margin: 0;
+}
+.cookie_hide {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .cookie {
+    padding: 1.6rem;
+  }
 }
 body.mobile-menu-open {
   overflow: hidden;
